@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <!-- Day - 2 || 01/06/2024 -->
+
+    Variable Is A Container For A Value.
+
+    Local Variable:
+        Variable is declared inside a Block Or Function.
+        And Accessible within the Function or Block only.
+        Also it is created by using var, let, const
+    
+            Eg:
+            <script>
+                // This part of code can't use num It Throw An Error
+                function testLocal(){
+                    let num = 7;   
+                    console.log(num);  // Local Scope   
+                    // This part of code can use num
+                }
+                // This part of code can't run/use num It Throw An Error
+                testLocal(); // Function Call
+            </script>
+
+            <!-- Output -->
+            7
+
+    Global Variable:
+        Global Variable is accessible from any function.
+        A variable i.e declared outside the function or 
+        declared with window object is known as Global Variable
+        It can be accessed from anywhere in the application/code.
+
+            Eg:
+            <script>
+                var num = 4;    
+                function globalVar(){
+                    console.log(num)
+                }
+                console.log(num);  // Global Scope
+            </script>
+
+            <!-- Output -->
+            4
+        
+        <!-- ----------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------- -->
+ 
+    --->   var, const, let   <---
+
+    var: (Function-Scope Or Global Scope)
+        Variable - It can be Re-assigned but can be Accessed within/nearest a Function ().
+
+    const: (Block-Scope)
+        Constant - It Can't be Re-assigned & Not Accesseble before they appear within code.
+
+    let: (Block-Scope)
+        Similar to const. It Re-assigned but Not Re-declare And Accessed within nearest Brackets {}.
+
+    
+    Variables can store values of any data type, and their values can be assigned and modified using the assignment operator (=)
+
+        Eg:- var 
+        <script>
+            var name = 'Dev';
+
+            function test(){         // Function Bracket Start --->
+                name = 'Harry';      // Re-assigned 
+                console.log(name);   // Accessing Ele Within A Function Scope
+            }                        // Function Bracket End <---
+            console.log(name);       // Showing Error :  After Accesing Function Scope
+            test();
+        </script>
+
+        <!-- Output: -->
+        Dev
+        undefined
+
+        <!-- ----------------------------------------------------------- -->
+
+        Eg:- const
+        <script>
+            const name2 = 'dev';
+            function test2() {
+                 name2 = 'harry';   // Can't Re-assigned Throw An Error - name2 already declared
+                 console.log(name2);
+            }
+            console.log(name2);    
+            test2();
+        </script>
+
+         <!-- Output: -->
+         Uncaught SyntaxError: Identifier 'name2' has already been declared  
+
+        <!-- ----------------------------------------------------------- -->
+
+         Eg:- let
+         <script>
+            function test3(){
+                if(true){                  // Nearest Bracket Start Of Let 
+                   let name3 = 'Gaurav';
+                    console.log(name3);   // Accessed Within The Nearest Bracket.
+                }                         // Bracket End
+            }
+            test3();
+         </script>
+
+         <!-- Output: -->
+         Gaurav
+
+
+
+</body>
+</html>
+
+<!-- For More About Scoping Visit Site -->
+<!-- https://web.dev/articles/global-and-local-scope -->

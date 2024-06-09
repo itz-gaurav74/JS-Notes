@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+
+    <!-- Day 4 || 02/06/2024 -->
+
+    # How Strings Are Indexed:
+        - Each of the character in string correspond to an Index Number, Starting with 0.
+
+        Eg: 
+            H O W  A R E  Y O U  ?       // string
+            0 1 2 3 4 5 6 7 8 9 10 11    // Index Number Start From 0
+
+    <!-- ------------------------------------------  -->
+
+    # Accessing Characters:
+        - Accessing the "How are you ?" string.
+            !- Using Square bracket Notation [].
+                Eg:
+                <script>
+                    "How are you?"[5];
+                </script>
+
+                O/p:
+                    r
+
+            !- Using charAt().
+                Eg:
+                <script>
+                    "How are you?".charAt(5);
+                </script>
+
+                O/p:
+                    r
+
+            !- Using indexOf().  // It return index number by the first instance of character.
+
+                Eg:
+                <script>
+                  "How are you?".indexOf('r');
+                  "How are you?".indexOf('are');
+                </script>
+
+                O/p:
+                    5    // r Contains Index no 5
+                    4    // Start With Index Of 4
+
+            !- Using lastIndexOf().  // Find Last Instance.
+                
+                Eg:
+                <script>
+                    "How are you?".lastIndexOf("o");
+                </script>
+
+                O/p:
+                    5
+                  
+            !-  Using slice().  // - It returns characters between two index numbers.
+                                // - First parameter will be starting index number & second parameter will be the index number where it should end.
+
+                Eg: 
+                <script>
+                    "How are you?".slice(8,11);
+                    "How are you?".slice(8);
+                </script>
+
+                O/p:
+                    you
+                    you?
+
+        -- Summarize --
+                : charAt() & slice() will return string values based on index numbers.
+                : indexOf() & lastIndexOf() will do the opposite, returning index numbers based on the provided string characters.
+
+    <!-- ------------------------------------------  -->
+
+    # Finding The Length Of String:    
+        - Using length property we can return the number of characters in a string.
+
+                Eg:
+                <script>
+                    "How are you?".length;
+                </script>
+
+                O/p:
+                    12
+
+    <!-- ------------------------------------------  -->
+
+    # Convert To Upper Or Lower Case.
+        - There is a two Built-in methods : 
+
+          1. toLowerCase().    // Convert All Characters To LowerCase.
+
+                Eg:
+                <script>
+                    "How ArE yOU?".toLowerCase();
+                </script>
+
+                O/p:
+                    how are you?
+
+          2. toUpperCase().    // Convert All Characters To UpperCase.
+
+                Eg: 
+                <script>
+                    "How are you?".toUpperCase();
+                </script>
+
+                O/p:
+                    HOW ARE YOU?
+
+    <!-- ------------------------------------------  -->
+
+    # Splitting Strings.
+        - Split() method splits (divides) a string into two or more substringsdepending on splitter (divider).
+        - After splitting the string into multiple substrings, the split() method put them in an array & return it.
+        - It doesn't modify originay string. 
+        - And yhe substrings are seoerated by whitespace character like " ".
+
+            Eg:
+                <script>
+                    const originalString = "How are you?";
+
+                    // Split string by whitespace character
+                    const splitString = originalString.split(' ');
+
+                    console.log(splitString);
+                    console.log(splitString[2]);    // We can access each section with index number.
+                </script>
+
+            O/p:
+                ['How', 'are', 'you?']
+                are                       // Accessed by using index number.
+
+    <!-- ------------------------------------------  -->
+
+    # Trimming Whitespace.
+        - trim() method removes the whitespace from both ends of a string.
+
+            Eg:
+                <script>
+                    const moreWhiteSpace = "   How are you?     ";
+                    const trimmedData = moreWhiteSpace.trim();
+                    console.log(trimmedData);
+                </script>
+
+            O/p:
+                How are you?    // All WhiteSpace Is remover From Both End.
+
+    <!-- ------------------------------------------  -->
+
+    # Find & Replace String Values.
+        - Using replace() method.
+        - First parameter is value to be found.
+        - And second parameter will be the value to replace it with.
+
+            Eg:
+                <script>
+                    const originalData = 'How are you?';
+                     // Replace "How" -> "Where"
+                     const replacedData = originalData.replace('How','Where');
+                     console.log(replacedData); 
+                </script>
+
+            O/p:
+                Where are you?
+
+</body>
+    </html>
+
+    <!-- For More Info Visit -->
+    <!-- https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy Falsy Values</title>
+</head>
+<body>
+    # Falsy Values:
+        - false
+        - null
+        - undefined
+        - 0
+        - -0
+        - NaN
+        - ""     // An Empty string
+
+        Eg:
+            <script>
+                let userAge = false;
+                if (userAge) {
+                    console.log("Truthy Block Goes Here");
+                } else {
+                    console.log('Falsy Block Goes Here');
+                }
+            </script>
+
+            O/p:
+                Falsy Block Goes Here
+    
+    # Truthy Values:
+        - true
+        - 1
+        - -1
+        - "Data"
+
+        Eg:
+            <script>
+                let userName = "Gaurav";
+                if (userName) {
+                    console.log('Truthy Block Goes Here');
+                } else {
+                    console.log('Falsy Block Goes Here');
+                }
+            </script>
+
+        O/p:
+            Truthy Block Goes Here
+</body>
+</html>

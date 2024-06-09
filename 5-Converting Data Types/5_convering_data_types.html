@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converting Data Types</title>
+</head>
+<body>
+    
+
+    # Implicit Conversion/Type coercion.
+        - Implicit Conversion Known As 'Type coercion'.
+        - It refers to the automatic conversion of values from ONE DATA TYPE to ANOTHER.
+        -  Such as strings to numbers.
+
+        Eg:
+            <script>
+                const val_1 = "10";    // It's Type Is String
+                const val_2 = 10;    // It's Type Is Number
+                let total = val_1 - val_2;    // It automatically convert string to a number before substracting.
+                console.log(total);
+            </script>
+        
+        O/p:
+            0
+
+        1. Numeric To String Coercion:
+            - Numeric values are automatically converted to a string when cooncatinated with strings.
+
+            Eg:
+                <script>
+                    let num = 10;
+                    let str = 'Number: ';
+                    let concat = str + num;    // Converting Number To String
+                    console.log(concat);
+                </script>
+
+            O/p:
+                Number: 10
+
+        2. String To Number Coercion:
+                - String containing numeric character are automatically converted to number when using the mathametical operations.
+
+                Eg:
+                    <script>
+                        let strNum = '10';
+                        let normalNum = 2;
+                        let output = strNum * normalNum;
+                        console.log(output);
+                    </script>
+
+                O/p:
+                    20
+
+
+    # Converting Values To String.
+        - Values can be explicitly converted to string by calling String() or n.toString().
+
+        Eg: // Using String()
+            <script>
+                String(true);
+                String(34);
+            </script>
+
+        O/p:
+            'true'    // Boolean Val Converted to string
+            '34'      // Number Converted to string
+
+
+        Eg:  // Using n.toString()
+            <script>
+                let data = 22;
+                data.toString();
+            </script>
+
+        O/p:
+            '22'
+
+
+    # Converting Values To Number.
+        - Using Number().
+
+        Eg:
+            <script>
+                let username = 'Dev';
+                console.log(Number(username));
+                console.log(typeof Number(username));
+                console.log(Number(' '));
+                console.log(Number('20,000'));
+            </script>
+
+        O/p:
+            NaN       // Not A Number
+            number    // Type Of Str Is Number
+            0         // The White Space/Empty String Will Convert To 0
+            NaN
+
+    # Converting Values To Booleans.
+        - It Convert Numbers Or Strings To Boolean Values.
+        - It Uses "Boolean()" Method Used.
+        - It Is used When User Entered A Data into User Field Or Not.
+        
+        ! - Boolean False Values:
+            - Boolean(0);            // Return False
+            - Boolean("");           // Return False
+            - Boolean(undefined);    // Return False
+            - Boolean(NaN);          // Return False
+            - Boolean(nulll);        // Return False
+
+        ! - Boolean True values:
+            -Boolean(2000);          // Return True
+            -Boolean(" ");           // Return True
+            -Boolean("Gaurav");      // Return True
+
+
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+<!-- https://www.digitalocean.com/community/tutorials/how-to-convert-data-types-in-javascript -->
+
+<!-- https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/ -->

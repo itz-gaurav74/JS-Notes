@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Concatination</title>
+</head>
+<body>
+    # String Concatination Using + Operator:
+        - It Useful For Performing Basic String Concatination.
+        - But It Become Less Readable When Performingg More Complex Concatinations.
+
+        Eg:
+            <script>
+                let greet = "Hello";
+                let name = "Gaurav";
+
+                let result = greet + " " + name;
+
+                console.log(result);
+            </script>
+
+        O/p:
+            Hello Gaurav
+
+    # String Concatination Using += Operator:
+        - It Is Useful When We Want To Add A String To An Existing String & Modify The Original String.
+        
+        Eg:
+            <script>
+                let userName = "Gaurav ";
+                userName += "Dev";
+                console.log(userName);
+            </script>
+
+        O/p:
+            Gaurav Dev
+
+    # String Concatination Using Template Literals:
+        - Template Literals Use Backticks (`) To Enclose A String Insted Of Single Or Double Quotes.
+        - Inside The Backticks, we Insert A Variable Or Expressions Directly Into String Using ${}.
+        - It Provide A Readable & Concise Syntex.
+
+        Eg:
+            <script>
+                let username = "Sky_Dev";
+                let accessId = 7;
+                let authenticate = `The Employee ${username} Has Been Accessed ${accessId} Data`;
+                console.log(authenticate);
+            </script>
+
+        O/p:
+            The Employee Sky_Dev Has Been Accessed 7 Data
+
+
+    # Using concat() Method:
+        - concat() Method Is A Build Is Method.
+        - It Is Used To Concatinate Two Or More Strings.
+        - It Is Useful When We Want To Concatinate String But Don't Want To Modify Existing Strings.
+
+        Eg:
+            <script>
+                let str1 = "Hello ";
+                let str2 = "Dev";
+                let res = str1.concat(str2);
+                console.log(res);
+            </script>
+
+        O/p:
+            Hello Dev
+
+    # Using join() Method:
+        - join() Method Is A Build In Method.
+        - It Is Used When We Working On Arrays Of String.
+        - It Combines All Array Elements Into A Single String & Seperated By A Seperator.If Seperator Is Not Defined A Comma (,) Is Used Default.
+        
+        Eg:
+            <script>
+                let programmingLang = ["JavaScript","Java","Python"];
+                let output = programmingLang.join(" ")
+            </script>
+
+        O/p:
+            JavaScript Java Python
+
+
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+ <!-- https://www.freecodecamp.org/news/how-js-string-concatenation-works/ -->
