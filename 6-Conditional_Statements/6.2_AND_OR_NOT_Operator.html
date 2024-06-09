@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AND && OR || NOT ! Operators</title>
+</head>
+<body>
+    # AND OR:
+        - AND "&&" and OR "||" Are Logical Operators.
+        - It Is Used to Peerform Different Logical Expressions.
+
+        - The AND Operator:
+            - The Logical AND Operator Is Used Between Two Operands.
+            - It Returns True Only If All The Conditiona Being Evaluted True.
+            - If Any Of The Condition Is False, The Entire Expression Evalutes To False.
+            
+            <!-- If Both operand Are True Then It Goes True Block Otherwise false -->
+
+            Syntax:
+                operand1 && operand2
+
+            Eg:
+                <script>
+                    let userAccess = true;
+                    let userId = 22;
+                    if (userAccess && userId > 20) {
+                        console.log('User Login Accessed');
+                    } else {
+                        console.log('User Login Declined');
+                    }
+                </script>
+            
+            O/p:
+                User Login Accessed
+
+            Eg:
+                <script>
+                    let userAccess2 = true;
+                    let userId2 = 14;
+                    if (userAccess2 && userId2 > 20) {
+                        console.log('User Login Accessed');
+                    } else {
+                        console.log('User Login Declined');
+                    }
+                </script>
+            
+            O/p:
+                User Login Declined
+
+        - The OR Operator:
+            - It Returns True If At Least One Of The Condition Is True.
+            
+            Syntax:
+                Operand22 || Operand33
+
+                <!-- If One Operand Is True Then It Goes To True Block, Otherwise False. -->
+
+            Eg:
+                <script>
+                    let userAccess3 = true;
+                    let userId3 = 14;
+                    if (userAccess3 || userId3) {
+                        console.log('User Login Accessed');
+                    } else {
+                        console.log('User Login Declined');
+                    }
+                </script>
+
+            O/p:
+                User Login Accessed
+
+
+            Eg:
+                <script>
+                    let userAccess4 = false;
+                    let userId4 = 14;
+                    if (userAccess4 || userId4) {
+                        console.log('User Login Accessed');
+                    } else {
+                        console.log('User Login Declined');
+                    }
+                </script>
+
+            O/p:
+                User Login Declined
+
+        - The NOT Operator:
+            - It Is A Unary Operator.
+            - It Used To Invert The Boolean Values Like True -> False & False -> True.
+
+            Eg:
+                <script>
+                    let isUserDev = true;
+                    let isNotUserDev = !isUserDev;
+                    console.log(isNotUserDev)
+                </script>
+
+            O/p:
+                false
+            
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+<!-- https://www.freecodecamp.org/news/logic-in-javascript/ -->
