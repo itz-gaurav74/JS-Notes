@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body>
+    # Do While Loop
+        - It Defines A Code Block To Be Executed Once, & Repeated as Long As Condition Is true.
+        - It Is Used When You Want To Run A Code Block `AT LEAST ONE TIME`.
+
+        Syntax:
+            do{
+                // Code Block To Be Executed
+            }while(Condition);
+
+            <!-- - `do` The Code Inside This Block Is Executed Once Before The Condition Is Tested.
+            - `while` After Executing The Code block, The Condition Is Evaluted. -->
+
+
+        Example:
+            <script>
+                let text = ' ';
+                let i = 0;
+
+                do {
+                    text = text + i ;
+                    console.log(text);    // Executed Code 
+                    i++;
+                } while (i < 5);     // Condition Meet
+
+                console.log(`----------END----------`);
+            </script>
+
+            O/p:
+                0
+                01
+                012
+                0123
+                01234
+
+        Example:
+            <script>
+                let text2 = ' ';
+                let i2 = 10;
+
+                do {
+                    text2 = text2 + i2 ;
+                    console.log(text2)    // Executed Atleast One Time
+                    i2++;
+                } while (i2 < 5);    // Condition Not Meet
+            </script>
+
+        O/p:
+            10
+
+</body>
+</html>

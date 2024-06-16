@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break & Continue Statement</title>
+</head>
+<body>
+    # Break Statement
+        - It Allows You To Terminate The Loop Early.
+
+
+        Example:
+            <script>
+                for(let i = 1; i <= 10; i++){
+                    if (i == 3) {    // If condition is true then stop executing.
+                        break;  // It Condition Meets Stop Executing The Code.
+                    }
+                    console.log(`Number ${i} Matched`);
+                }
+
+                console.log('---------------END-------------');
+            </script>
+
+            O/p:
+                Number 1 Matched
+                Number 2 Matched
+
+        Example:
+            <!-- Determine Whether The Array contains The Number 3. If There Is, We'll Display The Word 'Contains' In Console (and IF Not, Will Do Nothing) -->
+
+            <script>
+                let arr = [1,2,3,4,5];
+                for(let ele of arr){
+                    if (ele == 3) {
+                        console.log('Contains');
+                        break;    // Get Out Of The Loop
+                    }
+                }
+
+                console.log('---------------END-------------');
+
+            </script>
+
+            O/p:
+                Contains
+            
+        <!-- ## The Statement `break` Can Terminate Any Loop: The Usual `for`, `while`, And So On... -->
+
+    
+    # Continue Statement    
+        - It Allows To Skip/Breaks One Iteration In The Loop.
+
+        Example:
+            <script>
+                for(let num = 0; num <= 5; num++){
+                    if (num == 3) {  // If It's True 
+                        continue;     // This Condition Meet It Get skipped.
+                    }
+                    console.log(`Number Is ${num}`)
+                }
+
+                console.log('---------------END-------------');
+            </script>
+
+            O/p:
+                Number Is 0
+                Number Is 1
+                Number Is 2     // After 2 The 3 Is Skippped
+                Number Is 4
+                Number Is 5
+
+        Example:
+            <!-- An Array Of Numbers. Iterate Over It & The Numbers That Are Divisible By 2 Will Be Squared & Output To The Console. But The Numbers That Are Divisible By 3 Will Be Cubed & Output To Console ?  -->
+
+            <script>
+                let array = [1,2,3,4,5,6,7,8,9];
+                for(let num = 0; num <= array.length; num++){
+                    let total;
+                    if (num%2 == 0) {
+                        total = num * num;
+                        console.log(`Square Of ${num} Is ${total}`);
+                    }else if (num%3 == 0) {
+                        total = num * num * num;
+                        console.log(`The Cube Of ${num} Is ${total}`);
+                    } else {
+                        // console.log(`Skipped ${num}`);
+                        continue;   // it Skips The Value That Not Divisible By 2 & 3 & Reminder Is == 0.
+                    }
+                    console.log(`Output : ${total}`);
+                }
+
+                console.log('---------------END-------------');
+            </script>
+
+            O/p:
+                Square Of 0 Is 0
+                Output : 0
+                Square Of 2 Is 4    // Here 1 Skipped
+                Output : 4
+                The Cube Of 3 Is 27
+                Output : 27
+                Square Of 4 Is 16    // Here 5 Skipped
+                Output : 16     
+                Square Of 6 Is 36
+                Output : 36
+                Square Of 8 Is 64    // Here 7 Skipped
+                Output : 64
+                The Cube Of 9 Is 729
+                Output : 729
+</body>
+</html>
