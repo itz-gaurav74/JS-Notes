@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive Vs Refrence Data Type</title>
+</head>
+<body>
+    # Primitive Data Type:
+        - Are Store Data On Stack Memory.
+        - Primitive Data Are Stored Directly In A Variable.
+        - number, string, boolean, undefined, null, symbol.
+        - When We Assign A Primitive VAlue To A Variable, A Copy Of That Value Is Created & Stored In Memory. Any Changes Made To The Variable Do Not Affect The Original Value.
+
+        Example:
+            <script>
+                let x = 5;
+                let y = x;
+
+                x = 10;
+                console.log(x);
+                console.log(y);
+            </script>
+
+            O/p:
+                10
+                5
+
+
+    
+    # Refrence Data Type:
+        - Are Store Data On Heap Memory.
+        - Refrence Data Values Are Stored In Memory & Accessed Through A Refrence.
+        - array, object, functions.
+        - When We Assign A Refrence Value To A Variable, A Refrence To The Original Value Is Created & Stored In Memory. Any Changes MAde To The Variable Affect The Original Value.
+
+        Example:
+            <script>
+                let arr = [1, 2, 3];
+                let arr2 = arr;
+
+                arr.push(4);
+                console.log(arr);
+                console.log(arr2);
+            </script>
+
+            O/p:
+                [1, 2, 3, 4]
+                [1, 2, 3, 4]
+
+                
+</body>
+</html>
