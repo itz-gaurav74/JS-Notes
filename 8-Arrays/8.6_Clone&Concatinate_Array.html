@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone & Concatinate The Array</title>
+</head>
+<body>
+    # How To Clone An Array ? Without Refrence Data.
+        
+        Example: Using Slice();
+            <script>
+                let arr1 = [1, 2, 3, 4];
+                let arr2 = arr1.slice(0);
+
+                arr1.push(5)
+                console.log(arr1);
+                console.log(arr2);
+            </script>
+
+            O/p:
+                [1, 2, 3, 4, 5]
+                [1, 2, 3, 4]
+                
+        Example: Using Spread Operator
+            <script>
+                let arr3 = [1, 2, 3];
+                let arr4 = [...arr3];
+                
+                arr3.push(4);
+                console.log(arr3);
+                console.log(arr4);
+            </script>
+
+            O/p:
+                [1, 2, 3, 4]
+                [1, 2, 3]
+
+        Example: Using Concat();
+            <script>
+                let arr5 = [1, 2, 3];
+                let arr6 = [].concat(arr5);
+            
+                arr5.push(4);
+                console.log(arr5);
+                console.log(arr6);
+            </script>
+
+            O/p:
+                [1, 2, 3, 4]
+                [1, 2, 3]
+        
+</body>
+</html>

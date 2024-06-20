@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Clone Exercise</title>
+</head>
+<body>
+    <h2>See Output On Console Window</h2>
+
+    <script>
+
+        // Q-1 Create An Array1 Clone It To Arr2 & Add Some Ele To Array1 Using slice(), concat(), & Spread Operator ?
+
+        // Using Slice();
+        let arr1 = [1, 2, 3];
+        let arr2 = arr1.slice(0).concat('Added4');
+
+        console.log(arr1);
+        console.log(arr2);
+
+        console.log(`----------END----------`);
+
+        // Using Concat();
+        let arr3 = [1, 2, 3];
+        let demoArr = ['Testiing', 'Data', 'Access'];
+        let arr4 = [].concat(arr3, 'Added4', ...demoArr, 'Added5');
+
+        console.log(arr3);
+        console.log(arr4);
+
+        console.log(`----------END----------`);
+
+        // Using Spread Operator
+        let arr5 = [1, 2, 3];
+        let arr6 = [...arr5, 'Added4', 'Added5', 'Added6'];
+
+        console.log(arr5);
+        console.log(arr6);
+
+        console.log(`----------END----------`);
+
+    </script>
+</body>
+</html>
