@@ -10,7 +10,7 @@
         - Objects Store Data Using Key-Value Pair.
         - Object Is Refrence Data Type.
 
-    # Create & Access ^ Add An Object:
+    # Create An Object, Access Data From Object & Adding New Values In Object.
         <script>
             let obj = {
                 key : 'Value',
@@ -23,6 +23,8 @@
             console.log(obj.name);    // Accessing Data
             obj.keyName = 'NewValue';
             console.log(obj);
+
+            console.log(`----------END----------`);
         </script>
 
         O/p:
@@ -30,6 +32,33 @@
             Dev
             {key: 'Value', age: 22, name: 'Dev', keyName: 'NewValue'}
 
-        
+    # Dot Notation & Bracket Notation.
+        - Dot Notation Is Preferred For Its Readability & Simplicity.
+        - But Square Bracket Notation Is Necessary When You Need To  Access Property Dynamically Or When Dealing With Property Names That Are Not valid Identifiers.
+
+        Example:
+            <script>
+                let companyKey = 'cName';
+                let person = {
+                    key : 'value',
+                    userName : 'Dev',
+                    userId : 7,
+                    progLang:['Html', 'Css', 'Js']
+                }
+
+                // person.companyKey = 'Microsoft';    // Can't Access Value Of companyKey = cName Using Dot Notation
+                // console.log(person);
+                
+                person[companyKey] = 'Google';    // Using Bracket Notation The Value Of companyName = cName Is Accessed
+                console.log(person);
+
+            </script>
+
+            O/p:
+            <!-- Using Dot Notation Output -->
+                <!-- {key: 'value', userName: 'Dev', userId: 7, progLang: Array(3), companyKey: 'Microsoft'} -->
+
+            <!-- Using Bracket Notation Output -->
+                {key: 'value', userName: 'Dev', userId: 7, progLang: Array(3), cName: 'Google'}
 </body>
 </html>
