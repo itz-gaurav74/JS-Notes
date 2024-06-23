@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring</title>
+</head>
+<body>
+    # Array Destructuring:
+        - It Allows You To extraxt Values From Arrays Or Objects & Assign Them To variables Using Simple/Concise Syntex.
+
+        - Seperate The Array Values & Store In Another Variable Mean Destructuring.
+
+        Syntax:
+
+            let [var1, var2, var3] = array;
+
+        
+        Example: // Without Destructuring To Lengthy Process... 
+            <script>
+                let array = ["var1", "var2", "var3"];
+
+                let value1 = array[0];
+                let value2 = array[1];
+                let value3 = array[2];
+
+                console.log(`Without Destructurin Value1 Is ${value1}`);
+                console.log(`Without Destructurin Value2 Is ${value2}`);
+                console.log(`Without Destructurin Value3 Is ${value3}`);
+
+                console.log(`----------END WITHOUT DESTRUCTURING PROCESS----------`);
+            </script>
+
+            O/p:
+                Without Destructurin Value1 Is var1
+                Without Destructurin Value2 Is var2
+                Without Destructurin Value3 Is var3
+                ----------END WITHOUT DESTRUCTURING PROCESS----------
+
+
+        Example: // Using Destructuring Easy To Maintain & Readable Code. 
+            <script>
+                let arr = ["var1", "var2", "var3"];
+
+                const [val1, val2, val3] = arr;
+
+                console.log(`Value Of val1 Is ${val1}`);
+                console.log(`Value Of val2 Is ${val2}`);
+                console.log(`Value Of val3 Is ${val3}`);
+            </script>
+
+            O/p:
+                Value Of val1 Is var1
+                Value Of val2 Is var2
+                Value Of val3 Is var3
+</body>
+</html>
