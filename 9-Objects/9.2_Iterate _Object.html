@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterate Object </title>
+</head>
+<body>
+    # How To Iterate Object.
+        
+        Example:
+            <script>
+                let person = {
+                    name : 'Dev',
+                    age : 22,
+                    "person hobbies" : ['Guitar', 'Listening Music', 'Video Games']
+                }
+
+                // Iterate Using For-In Loop ----->
+
+                for(let key in person){
+                    // console.log(person.key);    // Using Dot Notation Shows Undefined
+                    console.log(person[key]);    //  Using Bracket Notation Show The value Of Key
+                }
+                console.log(`-----For-in Loop End-----`);
+
+
+                // Iterate Using Object.keys ----->
+
+                console.log(Object.keys(person));    // It Gives A Array Of Keys
+                 console.log(typeof Object.keys(person));    // Type Is Object
+                 console.log(Array.isArray(Object.keys(person)));    // Checking Object.keys Are Array Or Not
+                 console.log(`-----Object.keys End-----`);
+
+
+                //  Iterate Using For-Of & Object.keys ----->
+
+                 for(let key of Object.keys(person)){
+                    console.log(key);
+                    console.log(person[key]);
+                 }
+
+            </script>
+
+
+            O/p:
+                <!-- (3) Undefined -->
+                Dev
+                22
+                (3) ['Guitar', 'Listening Music', 'Video Games']
+                -----For-in Loop End-----
+                (3) ['name', 'age', 'person hobbies']
+                object
+                true
+                -----Object.keys End-----
+                name
+                age
+                person hobbies
+                22
+                person hobbies
+                (3) ['Guitar', 'Listening Music', 'Video Games']
+
+</body>
+</html>
