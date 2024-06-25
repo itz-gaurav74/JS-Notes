@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop In Array</title>
+</head>
+<body>
+    # For-In Loop:
+        - (It Iterate Over The Keys).
+
+        Syntax:
+            
+                for (const key in object) {
+                   // Code goes here
+                }
+            
+        Example:
+            <script>
+                let array = [1, 2, 3, 4, 5];
+                
+                for(let data in array){
+                    console.log(data);    // It Gives An Index Number As Key
+                    console.log(`----${array[data]}----`);    // It Gives The Value Of Data
+                }
+            </script>
+
+            O/p:
+                0
+                ----1----
+                1
+                ----2----
+                2
+                ----3----
+                3
+                ----4----
+                4
+                ----5----
+
+        Examle: Print All The Keys Of The Following Object To console ?
+            
+            <script>
+                let obj =  {x: 1, y: 2, z: 3};
+
+                for(let item in obj){
+                    console.log(item);
+                }
+            </script>
+
+            O/p:
+                x
+                y
+                z
+                
+</body>
+</html>
