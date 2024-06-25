@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Property</title>
+</head>
+<body>
+    # Computed Property.
+        - ES6 Allous Us To Use An Expression In Brackets [].
+        - Then Use The Result Of The Expression As Property Name Of Object.
+
+        <!-- Note:
+            Computed Properties Allow Us To Use The Values Of Expressions As Propeerty Names Of An Object. -->
+            
+
+        Example:
+            <script>
+                let propName = 'c';
+
+                let obj = {
+                    a : 1,
+                    b : 2,
+                    [propName] : 3
+                }
+
+                console.log(obj.c);
+            </script>
+
+            O/p:
+                3
+
+            -- Here `[propName]` is A Computed Property Of Obj Object.
+            -- When You Access `c` Property Of `obj` Object, Js Evalutes `propName` & Returns The Property's Value.
+            
+            
+        Example:
+            <script>
+                let key1 = 'objKey1'; 
+                let key2 = 'objKey2';
+                
+                let val1 = 'objVal1';
+                let val2 = 'objVal2';
+
+                let objct = {
+                    [key1] : val1,
+                    [key2] : val2
+                }
+
+                console.log(objct);
+                
+            </script>
+</body>
+</html>
