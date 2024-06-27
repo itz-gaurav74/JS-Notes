@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator In Object</title>
+</head>
+<body>
+    # Spread Operator:
+        - Spread Operator With Objects, It Allows Us To Create A New Object By Copying Properties From An Existing Object Or Merging Ptoperties From Multiple Objects.
+
+
+        Example:
+            <script>
+                const obj1 = {
+                    key1 : 'val1',
+                    key2 : 'val2'
+                }
+                const obj2 = {
+                    key3 : 'val3',
+                    key4 : 'val4'
+                }
+
+                const newObj = {...obj1, ...obj2};
+                console.log(newObj);
+            </script>
+
+            O/p:
+                {key1: 'val1', key2: 'val2', key3: 'val3', key4: 'val4'}
+
+
+        Example 2 :
+            <script>
+                const obj3 = {
+                    key1 : 'val1',
+                    key2 : 'val2'
+                }
+                const obj4 = {
+                    key3 : 'val3',
+                    key4 : 'val4',
+                    key1 : 'valUnique'    // Same Key On Both Objects
+                }
+
+                const SameKey = {...obj3, ...obj4};
+                const SameKeyBtObjOrder = {  ...obj4, ...obj3};
+                console.log(SameKey);
+                console.log(SameKeyBtObjOrder);
+            </script>
+
+            O/p:
+                {key1: 'valUnique', key2: 'val2', key3: 'val3', key4: 'val4'}
+                {key3: 'val3', key4: 'val4', key1: 'val1', key2: 'val2'}
+
+                <!-- Multiple Same Keys Are Accessed By Order Of Object First Come First Goes Override-->
+
+
+        Example 3:
+            <script>
+                const newCreate = {...'ABCD'};
+                console.log(newCreate);                
+            </script>
+
+            O/p:
+                {0: 'A', 1: 'B', 2: 'C', 3: 'D'}
+
+
+
+        1. Shallow Copy Of An Object:
+
+            Example:
+                <script>
+                    const original = {
+                        a : 1,
+                        b : 2
+                    };
+                    const copy = {
+                        ...original,
+                    };
+
+                    console.log(copy); 
+                    // console.log(copy === original); 
+
+                </script>
+
+                O/p:
+                    {a: 1, b: 2}
+                    <!-- false  -->
+</body>
+</html>
