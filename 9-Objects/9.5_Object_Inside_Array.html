@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Inside An Array</title>
+</head>
+<body>
+    # Objects Inside An Array:
+        - We Can store Multiple Objects In Array & Then We Call Any Loo Like For-loop, For-in, While-loop... For Getting Values.
+         
+        Example:
+            <script>
+                let arr = [
+                    {userId : 1, userName : 'Gaurav', role : 'SDE'},
+                    {userId : 2, userName : 'Dev', role : 'AI Automation'},
+                    {userId : 3, userName : 'Yash', role : 'Freelancer'},
+                ]
+
+                for(let user of arr){
+                    // console.log(user);
+                    console.log(user.userName);
+                }
+            </script>
+
+            O/p:
+            <!-- {userId: 1, userName: 'Gaurav', role: 'SDE'}
+            {userId: 2, userName: 'Dev', role: 'AI Automation'}
+            {userId: 3, userName: 'Yash', role: 'Freelancer'} -->
+            Gaurav
+            Dev
+            Yash
+            
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+ <!-- https://www.geeksforgeeks.org/how-to-access-array-of-objects-in-javascript/ -->
