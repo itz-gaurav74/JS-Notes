@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    device-width, initial-scale=1.0">
+    <title>Spread Operator In Arrays</title>
+</head>
+<body>
+    # Spread Operator In Arrays.
+        - In ES6 Introduced A Special Operator  `...` Called Spread.
+        
+        - When Spread Operator Is Placed In Front Of An Array, It Splits The Array Into Individuals Values.
+
+        Example: // Without Spread Opr
+            <script>
+                function fact(num1, num2, num3){
+                    let total = num1 + num2 + num3;
+                    console.log(total);
+                }
+
+                let arr = [1, 2, 3];
+                // fact(arr);
+                // fact(arr[0], arr[1], arr[2]);
+                fact(...arr);
+                
+            </script>
+
+            O/p:
+                6
+
+        Example:
+            <script>
+                let arr1 = [1, 2, 3];
+                let arr2 = [4, 5, 6];
+
+                let newArr = [...arr1, ...arr2, 4];
+                let seperateEle = [...'abcdef'];    // Iterate Over An Array Using Spread Operator
+
+                console.log(newArr);
+                console.log(seperateEle);
+            </script>
+
+            O/p:
+                (7) [1, 2, 3, 4, 5, 6, 4]
+                (6) ['a', 'b', 'c', 'd', 'e', 'f']
+
+</body>
+</html>
