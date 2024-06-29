@@ -24,12 +24,13 @@
                 
                 console.log(`--------------`);
 
-                let [{userName, role}, , {salary}] = users;
+                let [{userName, role}, , {userName : userName2, salary}] = users;
 
                 // We Skip Property Using/Adding An Quomma( , ).
 
                 console.log(`Access user1 - userName : ${userName}`);
                 console.log(`Access user1 - role : ${role}`);
+                console.log(`Access user3 - userName : ${userName2}`);
                 console.log(`Access user3 - salary : ${salary}`);
 
             </script>
@@ -45,5 +46,8 @@
 
 
         
+                <!-- Note :
+                 The second object in the array is skipped by using an empty slot ,, in the destructuring assignment. -->
+
 </body>
 </html>
