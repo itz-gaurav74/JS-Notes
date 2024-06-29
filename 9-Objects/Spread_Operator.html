@@ -10,7 +10,7 @@
         - Spread Operator With Objects, It Allows Us To Create A New Object By Copying Properties From An Existing Object Or Merging Ptoperties From Multiple Objects.
 
 
-        Example:
+        Example: // Copy & Store It Another Object
             <script>
                 const obj1 = {
                     key1 : 'val1',
@@ -29,7 +29,7 @@
                 {key1: 'val1', key2: 'val2', key3: 'val3', key4: 'val4'}
 
 
-        Example 2 :
+        Example 2 : // We Cannot Use Same Key On Multiple Objects When We Copying An Object 
             <script>
                 const obj3 = {
                     key1 : 'val1',
@@ -51,10 +51,10 @@
                 {key1: 'valUnique', key2: 'val2', key3: 'val3', key4: 'val4'}
                 {key3: 'val3', key4: 'val4', key1: 'val1', key2: 'val2'}
 
-                <!-- Multiple Same Keys Are Accessed By Order Of Object First Come First Goes Override-->
+                <!-- Multiple Same Keys Are Accessed By Order Of Object First Come First Goes /Override-->
 
 
-        Example 3:
+        Example 3: // We Can Iterate Over An Object Usign Spread Operator 
             <script>
                 const newCreate = {...'ABCD'};
                 console.log(newCreate);                
