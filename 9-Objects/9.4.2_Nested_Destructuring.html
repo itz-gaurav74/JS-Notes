@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Object Destructuring</title>
+</head>
+<body>
+    # Nested Destructuring:
+        
+        Example:
+            <script>
+                let users = [
+                    {userId : 1, userName : 'Gaurav', role : 'SDE', salary : '45K'},
+                    {userId : 2, userName : 'Dev', role : 'AI Automation', salary : '60K'},
+                    {userId : 3, userName : 'Yash', role : 'Freelancer', salary : '30K'},
+                ]
+
+                const [user1, user2, user3] = users
+
+                console.log(user1);
+                console.log(user2);
+                console.log(user3);
+                
+                console.log(`--------------`);
+
+                let [{userName, role}, , {userName : userName2, salary}] = users;
+
+                // We Skip Property Using/Adding An Quomma( , ).
+
+                console.log(`Access user1 - userName : ${userName}`);
+                console.log(`Access user1 - role : ${role}`);
+                console.log(`Access user3 - userName : ${userName2}`);
+                console.log(`Access user3 - salary : ${salary}`);
+
+            </script>
+
+            O/p:
+                {userId: 1, userName: 'Gaurav', role: 'SDE', salary: '45K'}
+                {userId: 2, userName: 'Dev', role: 'AI Automation', salary: '60K'}
+                {userId: 3, userName: 'Yash', role: 'Freelancer', salary: '30K'}
+                --------------
+                Access user1 - userName : Gaurav
+                Access user1 - role : SDE
+                Access user3 - salary : 30K
+
+
+        
+                <!-- Note :
+                 The second object in the array is skipped by using an empty slot ,, in the destructuring assignment. -->
+
+</body>
+</html>

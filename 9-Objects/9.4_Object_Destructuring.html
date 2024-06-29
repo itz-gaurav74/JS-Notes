@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+    # Object Destructuring:
+        - Extract Properties From Objects & Bind Them To Variables.
+
+        Example:
+            <script>
+                let obj = {
+                    key1 : 'val1',
+                    key2 : 'val2',
+                    key3 : 'val3',
+                }
+
+                const {key1, key2} = obj;
+
+                console.log(key1);
+                console.log(key2);
+                // console.log(key3);
+
+                console.log(`-----END-----`);
+            </script>
+
+            O/p:
+                var1
+                var2
+                <!-- Uncaught ReferenceError: key3 is not defined -->
+
+        
+                Example 2:  // We can Change Key Name Using Destructuring
+                    <script>
+                        let user = {
+                            dataAccess : true,
+                            id : 'AX23',
+                            role : 'SDE',
+                            salary : '45K',
+                            Exp : '2Yr'
+                        }
+
+                        let {dataAccess : userAccess, id, role, salary} = user;
+
+                        // console.log(dataAccess);    // Show  An Error Not Defined
+                        console.log(userAccess);
+                        console.log(id);
+                        console.log(role);
+                        console.log(salary);
+
+                        console.log(`-----END-----`);
+                    </script>
+
+                    O/p:
+                    <!-- Uncaught ReferenceError: dataAccess is not defined -->
+                    true
+                    AX23
+                    SDE
+                    45K
+
+            Example 3:  // '...' Working As A Remaining Properties Show
+                    <script>
+                        let person = {
+                            name : 'Gaurav',
+                            age : 22,
+                            hobbies : ['ExploreNature', 'CarsCollection', 'BikeRiding'],
+                            jobRole : 'SDE',
+                            salary : '10LPA'
+                        }
+
+                        const {name , age, ...otherRemaining} = person;
+
+                        console.log(name);
+                        console.log(age);
+                        console.log(otherRemaining);  // Show All Remaining Properties In Object
+                    </script>
+
+                    O/p:
+                        Gaurav
+                        22
+                        {hobbies: Array(3), jobRole: 'SDE', salary: '10LPA'}
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+<!-- https://dmitripavlutin.com/javascript-object-destructuring/ -->
