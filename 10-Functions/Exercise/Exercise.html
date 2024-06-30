@@ -7,7 +7,10 @@
     <title>Exercise</title>
 </head>
 <body>
-    # Check The Number Is Even Or Odd Using Function
+
+    # Create A Function That Takes An Number As User Input & Check The Number Is Even Or Odd, If Even Print True Otherwise false.
+                    OR
+    Check The Number Is Even Or Odd Using Function
 
 
         Example:  // Using Function Return
@@ -49,6 +52,7 @@
                 Even Number
 
 
+
     # Using Function Write A Program To Show First Index Character In A String.
     
         Example:
@@ -64,6 +68,30 @@
             O/p:
                 F
 
+
+
+    # Using Function Take An Array & A Target Number Check If The Target Number Is Exist In Array Or Not If Exist Print Index Of Thet Number Otherwise Print -1.
+
+        Example:
+            <script>
+                let arr = [1, 3, 55, 7, 6, 2];
+                let target = 7;
+
+                function check(arr, target){
+                   for(let i = 0; i < arr.length; i++){
+                    if (arr[i] === target) {
+                        return i ;
+                    } 
+                }
+                return -1
+                }
+
+                const output = check(arr, target);
+                console.log(output);
+            </script>
+
+            O/p:
+                3
         
 </body>
 </html>

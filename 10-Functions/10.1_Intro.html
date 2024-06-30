@@ -13,8 +13,9 @@
         - It Brake Down Complex Tasks Into Smaller & Readable Code.
         - DRY :  Don't Repeat Your Code.
 
+    # Function Declaration:
 
-        Example:
+        Example:  // Mean Declare A Function With Function Name.
             <script>
                 function sayHello(){
                     console.log('Hello Dev');
@@ -83,9 +84,59 @@
                 =  4 + Undefined 
                 = NaN -->
 
+    # Function Expression:
+        
+        Example:  // Mean Taking Function Name As An Variable Name  
+            <script>
+                const adding = function(a, b){
+                    return a + b;
+                }
 
+                console.log(adding(4, 6));
 
+            </script>
+
+            O/p:
+                10
+
+    # Arrow Functions:
+        
+        Example:  // Arrow Function 
+            <script>
+                const addingArrow = (c, d) => {
+                    return c + d;
+                }
+
+                console.log(addingArrow(4, 6));
+            </script>
+
+            O/p:
+                10
+
+        Example 2:  // Arrow Function For Single Parameter
+            <script>
+                const arrowParamShort = data => {
+                    return data
+                }
+
+                console.log(arrowParamShort('Gaurav'));
+            </script>
+
+            O/p:
+                Gaurav
             
+
+                Example 3:  // Arrow Function For one Liners
+                <script>
+                    const arrowShortLine = data =>  data;
+
+                    console.log(arrowShortLine('Gaurav'));
+                </script>
+    
+                O/p:
+                    Gaurav
+
+
 </body>
 </html>
 
