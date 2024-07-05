@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxical Scope</title>
+</head>
+<body>
+    # Laxical Scope / Static Scope:
+        - The Scope Of A Variable Is Defined By Its `Location Within The Source Code` And Nested Functions Have Access To Variables Declare In Their outer Scope.
+
+        - Js Has Laxical Scope.
+
+        - It Is The Scope Of Variable Or Function Based On Where It Is Defined n The Source Code.
+
+        Example:
+            <script>
+                let a = 10;
+
+                const outerFun = () => {
+                    var b = 20;
+                    console.log(`a & b Accessible (Outer) : ${a} ${b}`);
+
+                    const innerFunc = () => {
+                        var c = 30;
+                        console.log(`a & b & c Accessible (Inner) : ${a} ${b} ${c}`)
+                    }
+
+                    innerFunc();
+                    return;
+                }
+
+                outerFun();
+                console.log(`Only a Is Accessible (Global) : ${a}`);
+
+
+            </script>
+
+            O/p:
+                a & b Accessible (Outer) : 10 20
+                a & b & c Accessible (Inner) : 10 20 30
+                Only a Is Accessible (Global) : 10
+
+
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+<!-- https://dev.to/pranav016/advanced-javascript-series-part-41-global-function-and-block-scope-lexical-vs-dynamic-scoping-20pg -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Inside Function</title>
+</head>
+<body>
+    # Functions Inside Function:
+        
+        Example:
+            <script>
+                const app = () => {
+                    
+                    const firstPage = () => {
+                        console.log('Welcome To Functions Inside Function');
+                    }
+
+                    const addTwoNum =(a, b) => a + b ; 
+                  
+                    const userName = username => username;
+
+
+                    console.log('App Working...');
+
+                    firstPage();
+                    console.log(addTwoNum(2, 4))
+                    console.log(userName('Dev'));
+                }
+
+                app();
+            </script>
+            
+            O/p:
+                App Working...
+                Welcome To Functions Inside Function
+                6
+                Dev
+</body>
+</html>

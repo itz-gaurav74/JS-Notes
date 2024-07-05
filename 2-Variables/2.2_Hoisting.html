@@ -7,20 +7,68 @@
 </head>
 <body>
     # Hoisting:
-        - the built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope – all before code execution.
+        - The built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope - all before code execution.
 
-        Example:  // Hoisting In Variables
-        <script>
-            // console.log(data);    // Uncaught ReferenceError: Cannot access 'data' before initialization
 
-            let data = 'Hoisted';
+        -- Hoisting Using var Variable --
 
-            console.log(data);    // Hoisted
-        </script>
+            - A Variable Can Be Used/Accessed Before It Has Been Declared.
 
-        O/p:
-            <!-- Uncaught ReferenceError: Cannot access 'data' before initialization -->
-            Hoisted
+            Example:
+                <script>
+                    x = 7;    // Assign 7 To x
+
+                    console.log(`Using var -- ${x}`);    // Log The Output
+
+                    var x;    // Declare x
+                </script>
+
+                O/p:
+                    7
+
+        -- Hoisting Using let & const Variable --
+
+            - Using let Variable Before It Declared Will Result In ReferenceError 
+
+            Example:
+                <script>
+                    userName = 'Dev';
+
+                    console.log(`Using let  : Uncomment The Line To See Changes -- ${userName}`);
+
+                    // let userName;    // Uncomment This to See Changes
+                </script>
+
+                O/p:
+                    Uncaught ReferenceError: Cannot access 'userName' before initialization
+
+
+            Example:  // Hoisting In Variables
+                <script>
+                    // console.log(data);    // Uncaught ReferenceError: Cannot access 'data' before initialization
+
+                    let data = 'Hoisted';
+
+                   console.log(`Using let  : Uncomment The Line To See Changes -- ${data}`);    // Hoisted
+                </script>
+
+                O/p:
+                    <!-- Uncaught ReferenceError: Cannot access 'data' before initialization -->
+                    Hoisted
+
+
+            Example:  // Using const
+                <script>
+                    userID = 7;
+
+                    console.log(`Using const : Uncomment The Line To See Changes -- ${userID}`);
+
+                    // const userID;  // Uncomment This To See Changes
+                </script>
+
+                O/p:
+                    Uncaught SyntaxError: Missing initializer in const declaration
+
 
 </body>
 </html>

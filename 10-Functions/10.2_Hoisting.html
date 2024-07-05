@@ -9,28 +9,13 @@
 <body>
     # Hoisting:
         - Hoisting Is A Concept Or Behavior In JS Where  The Declaration Of A Function, Variable, Or Class Goes To The Top Of The Scope They Where Defined In.
-
-        Example:  // Hoisting In Variables
-            <script>
-                // console.log(data);    // Uncaught ReferenceError: Cannot access 'data' before initialization
-
-                let data = 'Hoisted';
-
-                console.log(data);    // Hoisted
-            </script>
-
-            O/p:
-                <!-- Uncaught ReferenceError: Cannot access 'data' before initialization -->
-                Hoisted
-
         
         Example:  // Hoisting In Functions
             <script>
                 declaration();
-
-
-                function declaration (){
-                    return 'Hoisting Working In Function Declaration'
+                
+                function declaration(){
+                    console.log('Hoisting Is Working In Function Declaration');
                 }
             </script>
 
