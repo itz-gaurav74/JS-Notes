@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting In Variables</title>
+</head>
+<body>
+    # Hoisting:
+        - the built-in behavior of the language through which declarations of functions, variables, and classes are moved to the top of their scope – all before code execution.
+
+        Example:  // Hoisting In Variables
+        <script>
+            // console.log(data);    // Uncaught ReferenceError: Cannot access 'data' before initialization
+
+            let data = 'Hoisted';
+
+            console.log(data);    // Hoisted
+        </script>
+
+        O/p:
+            <!-- Uncaught ReferenceError: Cannot access 'data' before initialization -->
+            Hoisted
+
+</body>
+</html>
