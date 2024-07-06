@@ -2,91 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Function Vs Block Scope</title>
+    <title>Block Vs Function Scope</title>
 </head>
 <body>
-
-    <!-- First Understand -- 2.1 Variables Inside var, let And sonst scope -->
-
-
-
-    # Function Scope:
-        - When A Variable Is Declared Inside A Function, It Is Only Accessible Within That Function & Cannot Be Used Outside Of That Function.
-
-        Example:  // We Used let In Function Scope
-            <script>
-                let funScope = () => {
-                    let userName = 'Dev';
-                    console.log(userName);    // Accessible Within That Function
-                }
-
-                // console.log(userName);    // Throw Error 
-                funScope();
-
-            </script>
-
-            O/p:
-                Dev
-                <!-- Uncaught ReferenceError: userName is not defined -->
+    # Block Vs Function Scope:
+        - let & const are block scope
 
 
-    # Block Scope:
-        - A Variable Declared Inside Curly Braces Are Called Within Block Scope. { // Code Here } 
 
-
-        Example: // We Used let In Block Scope
-            <script>
-                if (true) {
-                    let data = 'Success';
-                    console.log(data);
-                }
-
-                // console.log(data);
-
-                console.log(`----Block Scope----`)
-            </script>
-
-            O/p:
-                Success
-                <!-- Uncaught ReferenceError: data is not defined -->
-
-
-    # Function Scope Vs Block Scope:
-            
-        Example:
-            <script>
-                function funBlock(){
-                    if (true) {
-                        var sub1 = 'JavaScript Using var';
-                        let sub2 = 'Python Using let';
-                        const sub3 = 'Django Using const';
-
-                        console.log(sub1);
-                        console.log(sub2);
-                        console.log(sub3);
+            Example:
+                <script>
+                    {
+                        
                     }
-                    
-                    console.log('---Outside If Statement---');
-                    console.log(sub1);
-                    console.log(sub2);
-                    console.log(sub3);
-                }
-
-                funBlock();
-            </script>
-
-            O/p:
-                JavaScript Using var
-                Python Using let
-                Django Using const
-                ---Outside If Statement---
-                JavaScript Using var
-                Uncaught ReferenceError: sub2 is not defined
-
+                </script>
 </body>
 </html>
-
-<!-- For More About Visit Site -->
-<!-- https://medium.com/nerd-for-tech/function-scope-block-scope-in-js-d29c8e7cd216 -->
