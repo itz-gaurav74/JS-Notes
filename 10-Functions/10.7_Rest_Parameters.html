@@ -46,6 +46,24 @@
                     2
                     3
                     [4, 5, 6, 7]
+
+            
+            Example 2:
+                <script>
+                    function printData(data1, data2, ...data3){
+                        console.log(`Data First Is : ${data1}`);
+                        console.log(`Data Second Is : ${data2}`);
+                        console.log(`All Remaining Data Is : ${data3}`);    // Using Template Literals
+                        console.log('All Remaining Data Is : ' , data3);    // Without Template Liiterals Give An Array Of Remaining Arguments
+                    }
+
+                    printData('Harry Poter', 'Network', 'Cyber-Security', 'Hacker', 'Spy');
+                </script>
                     
+                O/p:
+                Data First Is : Harry Poter
+                Data Second Is : Network
+                All Remaining Data Is : Cyber-Security,Hacker,Spy
+                All Remaining Data Is :  (3) ['Cyber-Security', 'Hacker', 'Spy']
 </body>
 </html>
