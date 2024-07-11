@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    Example:  Usung Rest Parameter Add All n Numbers 
+        <script>
+            function addNNum(...num) {
+                let total = 0;
+                for (const val of num) {
+                    total = total + val;
+                    // console.log(total);
+                }
+                return total;
+            }
+
+            console.log(addNNum(2, 1, 3));
+        </script>
+
+        O/p
+            6
+</body>
+</html>
