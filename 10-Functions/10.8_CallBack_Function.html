@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+<body>
+    # What Is Function:
+        - Function Is A Block Of Code That Performs A Certain Task When Called.
+
+        Example:
+            <script>
+                // Function
+                function greet(name) {
+                    console.log(`Hii ${name}`);
+                }
+
+                greet('Dev');    // Passed Name As Argument
+            </script>
+
+
+            O/p:
+                Hii Dev
+
+
+
+    # What Is CallBack Function:
+        - We Can Also Pass A Function As An Argument A Function.
+        - This Function That Is Passed As An Argument Inside Of Another Function Called CallBack Function.
+
+        Example:
+            <script>
+                // Function
+                function greetNew(nameNew, callbackFun){
+                    console.log(`Hello ${nameNew}`);
+                    callbackFun();
+                }
+
+                // CallBack Function
+                function callMe(){
+                    console.log(`Here A CallBack Function`);
+                }
+
+                // Passing Function As An Argument
+                greetNew('Dev', callMe);
+            </script>
+
+            
+            O/p:
+                Hello Dev
+                Here A CallBack Function
+
+
+
+
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+<!-- https://www.programiz.com/javascript/callback -->
