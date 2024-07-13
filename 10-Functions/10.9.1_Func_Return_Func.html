@@ -30,14 +30,16 @@
         Example 2:
             <script>
                 function first(){
-                    return function second(){
-                        return 'hello second';
+                    return function(){
+                        return 'Hello Second';
                     }
-                    return 'hello first'
                 }
                 
                 let answer = first();
-                console.log(answer);
+                console.log(answer());
             </script>
+
+            O/p:
+                Hello Second
 </body>
 </html>
