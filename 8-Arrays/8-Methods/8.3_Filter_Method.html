@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Method</title>
+</head>
+<body>
+    # Filter():
+        - Creates A New Array Of Ele That Give True For Condition.
+        - It Take A CallBack Function As Input.
+
+            Example:  // Using Filter Log All Even Numbers In Array ?
+                <script>
+                    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+                    let isEvenNum = numbers.filter((num)=>{
+                        return  num %  2  === 0;
+                    });
+
+                    console.log(isEvenNum);    // New Array
+                    console.log(numbers);      // Original Array
+                </script>
+
+                O/p:
+                    (4) [2, 4, 6, 8]
+                    (8) [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+
+            <!-- Note:
+                - The Filter() Doesn't Modify Original Array.
+                - If you Forget To Use 'return' Keyword In Your Filter Function, The result Will Be Undefined. -->
+                
+</body>
+</html>

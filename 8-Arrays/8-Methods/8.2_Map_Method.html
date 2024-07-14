@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Mathod</title>
+</head>
+<body>
+    # Map():
+        - It Create A New Array By Calling A Provoded Function On Every Ele In The Calling Array.
+        - It Return A New Array.
+        - It Is Used When You Want To Transform each Ele Of An Array & Create A New Array Based On Transformation.
+        - It Takes An CallBack Function As Input.
+        - Use Return Keyword In Map();
+
+
+        Example:
+            <script>
+                let numbers = [2, 4, 6, 8];
+
+                let squareNum = numbers.map((num)=>{
+                    return num*num;
+                });
+
+                console.log(squareNum);
+
+            </script>
+
+            O/p:
+                (4) [4, 16, 36, 64]
+
+
+        Example 2: // Using Map() Method Create A Array Containing Multiple Students Data Like FirstName, Age, Std & Log User's FirstName In Console ?
+
+            <script>
+                let studentsData = [
+                        {firstName : 'Harry', age : 23, std : 'Diploma'},
+                        {firstName : 'Dev', age : 25, std : 'M.COM'},
+                        {firstName : 'Gaurav', age : 22, std : 'B.COM'},
+                        {firstName : 'Radha', age : 22, std : 'B.COM'},
+                    ];
+
+                    let userNameArr = studentsData.map((name)=>{
+                        return `${name.firstName}`;
+                    })
+
+                    console.log(userNameArr);
+            </script>
+
+            O/p:
+                (4) ['Harry', 'Dev', 'Gaurav', 'Radha']
+</body>
+</html>

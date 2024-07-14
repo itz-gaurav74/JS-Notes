@@ -11,15 +11,22 @@
         - It Executes A Provoded Function Once For Each Array Element.
         - It Dosen't Return A New Array; It Just Iterate Through Array.
         - It Is Used When You Want To Perform An Action Or Operation On Each Element Of The Array Without Creating A New Array.
+        -  It Takes A CallBack Function As Input.
 
 
-            Example:
+            Syntax:
+                <!-- <script>
+                    arr.forEach((currentEle, index, arr));
+                </script> -->
+
+            Example:  // Using ForEach On Array Ele
                 <script>
                     let num = [2, 4, 6, 8];
                     num.forEach((ele)=> {    // It Take An CallBack Function
                         console.log(ele*2);
-                    })
+                    });
                     
+                    console.log(`---------------`);
                 </script>
 
                 O/p:
@@ -27,5 +34,96 @@
                     8
                     12
                     16
+
+
+            Example 2:  // Using ForEach Taking As CallBack Function
+                <script>
+                    let userSalary = ['25K', '55K', '24K', '45K'];
+
+                    let userData = (salary, index) => {
+                        console.log(`User Index : ${index}, & Salary : ${salary}`)
+                    }
+
+                    userSalary.forEach((userData));
+                    
+                    console.log(`---------------`);
+                </script>
+
+                O/p:
+                    User Index : 0, & Salary : 25K
+                    User Index : 1, & Salary : 55K
+                    User Index : 2, & Salary : 24K
+                    User Index : 3, & Salary : 45K
+
+
+            Example 3:  // Using ForEach Taking Function As Callback
+                <script>
+                    userSalary.forEach(function(salary, index){
+                        console.log(`User Id : ${index}'s Salary Is ${salary}`);
+                    })
+
+                    console.log(`---------------`);
+                </script>
+
+                O/p:
+                    User Id : 0's Salary Is 25K
+                    User Id : 1's Salary Is 55K
+                    User Id : 2's Salary Is 24K
+                    User Id : 3's Salary Is 45K
+
+
+            Example 4: // Using ForEach Create An Array And Multiply Each Ele By 2.
+
+                <script>
+                    let numbers = [2, 4, 6, 8];
+
+                    numbers.forEach(function(number, index){
+                        console.log(`At Index ${index} Number ${number} * 2 = ${number*2}`)
+                    });
+
+                    console.log(`---------------`);
+                </script>
+
+                O/p:
+                    At Index 0 Number 2 * 2 = 4
+                    At Index 1 Number 4 * 2 = 8
+                    At Index 2 Number 6 * 2 = 12
+                    At Index 3 Number 8 * 2 = 16
+
+
+            Example 5: // Using ForEach Create A Array Containing Multiple Students Data Like FirstName, Age, Std & Log User's FirstName In Console ?
+
+                <script>
+                    let studentsData = [
+                        {firstName : 'Harry', age : 23, std : 'Diploma'},
+                        {firstName : 'Dev', age : 25, std : 'M.COM'},
+                        {firstName : 'Gaurav', age : 22, std : 'B.COM'},
+                        {firstName : 'Radha', age : 22, std : 'B.COM'},
+                    ];
+
+                    // Using ForEach()
+                    console.log(`-----Using ForEach()-----`);
+                    studentsData.forEach((name) => {
+                        console.log(`Student UserName : ${name.firstName}`);
+                    });
+
+                    // Using For Of Method
+                    console.log(`-----Using For Of Loop-----`);
+                    for(let name of studentsData){
+                        console.log(`User's Name Is ${name.firstName}`);
+                    }
+                </script>
+
+                O/p:
+                    -----Using ForEach()-----
+                    Student UserName : Harry
+                    Student UserName : Dev
+                    Student UserName : Gaurav
+                    Student UserName : Radha
+                    -----Using For Of Loop-----
+                    User's Name Is Harry
+                    User's Name Is Dev
+                    User's Name Is Gaurav
+                    User's Name Is Radha
 </body>
 </html>
