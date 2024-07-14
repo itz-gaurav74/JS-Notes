@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Array Methods</title>
+</head>
+<body>
+    # Important Array Methods:
+        1. ForEach
+        2. Map
+        3.
+        4. Reduce
+
+
+        ## Without Using Array Methods & Loops:
+
+            Example:    
+                <script>
+                    let arr = [4, 2, 6, 1];
+
+                    function multiplyBy2(index, number){
+                        console.log(`Index Of ${index}`);
+                        console.log(`${number} * 2 = ${number*2}`);
+                    }
+
+                    // -- To Leanthy Process --
+                    // multiplyBy2(0, arr[0]);
+
+                    // Using for Loop
+                    for(let i=0; i<=arr.length-1; i++){
+                        multiplyBy2(i, arr[i]);
+                    }
+                </script>
+
+                O/p:
+                    <!-- Index Of 0
+                    4 * 2 = 8 -->
+                    Index Of 0
+                    4 * 2 = 8
+                    Index Of 1
+                    2 * 2 = 4
+                    Index Of 2
+                    6 * 2 = 12
+                    Index Of 3
+                    1 * 2 = 2
+
+
+</body>
+</html>
