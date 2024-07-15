@@ -14,6 +14,14 @@
         - It Takes An CallBack Function As Input.
         - Use Return Keyword In Map();
 
+        Syntax:
+            <!-- <script>
+                let NewArr = arr.map(function(ele, index, array){
+                    // Some Code
+                    return //Modifyed Array
+                });
+            </script> -->
+
 
         Example:
             <script>
@@ -31,7 +39,7 @@
                 (4) [4, 16, 36, 64]
 
 
-        Example 2: // Using Map() Method Create A Array Containing Multiple Students Data Like FirstName, Age, Std & Log User's FirstName In Console ?
+        Example 2: // Using Map() Method Create A Array Containing Multiple Students Data Like FirstName, Age, Std & Log User's FirstName And Index In Console ?
 
             <script>
                 let studentsData = [
@@ -41,14 +49,52 @@
                         {firstName : 'Radha', age : 22, std : 'B.COM'},
                     ];
 
-                    let userNameArr = studentsData.map((name)=>{
-                        return `${name.firstName}`;
+                    let userNameArr = studentsData.map((name, Index)=>{
+                        return `${Index} - ${name.firstName}`;
                     })
 
                     console.log(userNameArr);
             </script>
 
             O/p:
-                (4) ['Harry', 'Dev', 'Gaurav', 'Radha']
-</body>
+                (4) ['0 - Harry', '1 - Dev', '2 - Gaurav', '3 - Radha']
+
+
+        Example 3:  // If necessary, the array itself can be passed to the third parameter:
+            <script>
+                let arr = [2, 4, 6, 8];
+
+                let newArr = arr.map((ele, idx, array) => {
+                    console.log(`Element : ${ele}`);
+                    console.log(`Index : ${idx}`);
+                    console.log(`Array : ${array}`);
+                    console.log('-----');
+                    return ele *2;
+                });
+
+                console.log(newArr);
+
+            </script>
+
+            O/p:
+                Element : 2
+                Index : 0
+                Array : 2,4,6,8
+                -----
+                Element : 4
+                Index : 1
+                Array : 2,4,6,8
+                -----
+                Element : 6
+                Index : 2
+                Array : 2,4,6,8
+                -----
+                Element : 8
+                Index : 3
+                Array : 2,4,6,8
+                -----
+                (4) [4, 8, 12, 16]
+
+
+    </body>
 </html>
