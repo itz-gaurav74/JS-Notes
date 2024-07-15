@@ -14,22 +14,30 @@
             2. Current Element/ VAlue Of Array.
         -  Initial Value Of Accumulator Is `0`.
 
+
+        Syntax:
+            <!-- <script>
+                let newArr = arr.reduce((acc, res) =>{
+                    return acc =acc+ res;
+                }, InitialVal); 
+            </script> -->
+
         Example:  // Sum Of All The Numbers In The Array
             <script>
                 let numbers = [1, 2, 3, 4, 5];
 
                 let sum = numbers.reduce((acc, curr)=>{
                     return acc + curr;
-                });
+                }, 0);
 
-                console.log(sum);
+                console.log(`The Sum Of All Numbers In Arr Is : ${sum}`);
             </script>
 
             O/p:
-                15
+                The Sum Of All Numbers In Arr Is : 15
 
 
-        <!-- Acc Val      Curr Val     +     Return Val
+        <!-- Acc Val   +   Curr Val     =     Return Val
                 0               1                  1
                 1               2                  3
                 3               3                  6
@@ -38,6 +46,31 @@
         -->
 
 
+        Example:
+            <script>
+                let userCart = [
+                    {productId : 1, productName: 'Android Phone', price : 12000},
+                    {productId : 2, productName: 'Tv', price : 8000},
+                    {productId : 3, productName: 'Laptop', price : 20000},
+                    ];
 
+                    let ProdPrice = userCart.reduce((totalPrice, product) =>{
+                        return product.price + totalPrice;
+                    }, 0);
+
+                    console.log(`The Total Price Of All Products In Cart Is : ${ProdPrice}`);
+
+            </script>
+
+            O/p:
+                The Total Price Of All Products In Cart Is : 40000
+
+
+            Explain:
+                <!--  totalPrice   +    product   =     Return Val
+                        12000              0                 12000
+                        12000              8000            20000
+                        20000              20000          40000
+                 -->
 </body>
 </html>
