@@ -10,8 +10,41 @@
     # Sort():
         - It Allow Us To Re-Arrange The Order Of Ele In Array.
         - It Sort By Ascending Order Based On Unicode Character Code/ASCII Code Values By Default.
+        - It Overwrites The Original Array.
 
+        Syntax:
+            <!-- <script>
+                arr.sort(compareFun);
+            </script> -->
         
+
+            CompareFun:
+                Sorting alphabetically works well for strings ("Apple" comes before "Banana").
+                But, sorting numbers can produce incorrect results.
+                "25" is bigger than "100", because "2" is bigger than "1". It Uses ASCII Codes.
+                You can fix this by providing a "compare function" (See examples below).
+
+        Example:
+            <script>
+                const characters = [
+                    "Nebula",
+                    "Thanos",
+                    "Star Lord",
+                    "Groot",
+                    "Rocket",
+                    "Drax",
+                    "Gamora",
+                ];
+
+                const sortedArr = characters.sort();
+                console.log(sortedArr);
+                console.log(characters);    // Overwrites Original Array
+            </script>
+
+            O/p:
+                (7) ['Drax', 'Gamora', 'Groot', 'Nebula', 'Rocket', 'Star Lord', 'Thanos']
+                (7) ['Drax', 'Gamora', 'Groot', 'Nebula', 'Rocket', 'Star Lord', 'Thanos']
+
 
 
 </body>
