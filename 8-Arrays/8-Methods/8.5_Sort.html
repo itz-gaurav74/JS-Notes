@@ -18,13 +18,25 @@
             </script> -->
         
 
+        - compareFun : Is A Function That Compares Two Items Of An Array.
+
+        Syntax Of compareFunction:
+            <!-- <script>
+                function (a, b){
+                    // Sorting Logic
+                    // Return A Number
+                }
+            </script> -->
+
             CompareFun:
                 Sorting alphabetically works well for strings ("Apple" comes before "Banana").
                 But, sorting numbers can produce incorrect results.
                 "25" is bigger than "100", because "2" is bigger than "1". It Uses ASCII Codes.
                 You can fix this by providing a "compare function" (See examples below).
 
-        Example:
+
+        <!-- Sort Using Characters -->
+        Example:  
             <script>
                 const characters = [
                     "Nebula",
@@ -45,7 +57,7 @@
                 (7) ['Drax', 'Gamora', 'Groot', 'Nebula', 'Rocket', 'Star Lord', 'Thanos']
                 (7) ['Drax', 'Gamora', 'Groot', 'Nebula', 'Rocket', 'Star Lord', 'Thanos']
 
-        Example:
+        Example 2:
             <script>
                 const data = ['hello', 'World', 'Hello', 'world', 'asdf', 'Asdf'];
 
@@ -57,6 +69,75 @@
                 ['Asdf', 'Hello', 'World', 'asdf', 'hello', 'world']
 
 
+        <!-- Sort Using Numbers -->
+        Example:  // Without Using CompeareFun
+            <script>
+                let numbs = [4, 3, 11, 2, 17, 6];
+
+                numbs.sort();    //  Not Sorting Using this Method Use CompairFun
+                console.log(numbs);
+            </script>
+
+            O/p:
+                (6) [11, 17, 2, 3, 4, 6]    // Not Sorted
+
+        Example  2:   // Using CompareFun
+            <script>
+                let numbers = [4, 3, 11, 2, 17, 6];
+
+                numbers.sort((a, b) => {
+                    return a-b;
+                });
+
+                console.log(numbers);
+            </script>
+
+            O/p:
+                (6) [2, 3, 4, 6, 11, 17]
+
+
+            <!-- Explanation:
+            - Inside the comparator function:
+                 a and b are elements being compared.
+                 a - b is used to compare a and b numerically. If a is less than b, it returns a negative value, if a is greater than b, it returns a positive value, and if they are equal, it returns 0.
+                 Therefore, the sorting function return a - b; sorts the array in ascending order. -->
+
+                <!-- a < b = 4 < 3 = Negative/False
+                a > b = 4 > 3 = Possitive/True -->
+
+        Example:
+            <script>
+                let count = [4, 3, 11, 2, 17, 6];
+                const result = function(a, b){
+                    if (a > b ) {
+                        return 1;  // b Comes First 
+                    }if (a < b) {
+                        return -1;  // a Comes First
+                    } else {
+                        return 0;  // Nothing Changed
+                    }
+                }
+
+                count.sort(result);
+                console.log(count);
+            </script>
+
+            O/p:
+                (6) [2, 3, 4, 6, 11, 17]
+
+
+
+        <!-- 
+            let count = [4, 3, 11, 2, 17, 6];
+
+            a - b = 4 - 3 = 1 (Possitive  =  return b) [3, 4, 11, 2, 17, 6]
+            a - b = 4 - 11 = -7 (Negative = return a)[3, 4, 11, 2, 17, 6]
+            a - b = 11 - 2 = 8 (Possitive = b) [3, 4, 2, 11, 17, 6]
+         -->
+        
+
+
+            
 
 </body>
 </html>
