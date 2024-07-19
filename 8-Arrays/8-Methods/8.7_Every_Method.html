@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Method in Array</title>
+</head>
+<body>
+    # Every Method:
+        - It Checks If All The Array Elements Pass The Given Test Function.
+        
+        
+        Example:   // Checks The Age Is 18 Or Above
+            <script>
+                let ageArray = [20, 22, 21, 24];
+
+                const isVote = (age) => {
+                    return age >= 18;
+                }
+
+                const voter = ageArray.every(isVote);
+
+                console.log(voter);
+            </script>
+
+            O/p:
+                true
+
+
+        - The every() method returns:
+            true - if all the array elements pass the given test function (callback returns a truthy value).
+            false - if any array element fails the given test function.
+        
+        <!-- Notes:
+            every() does not change the original array.
+            every() does not execute the callback() function for an empty array. In case we do pass an empty array, it always returns true. -->
+
+
+        Example 2:  // Check Cart Product Price Is Less Then 30000 Or Not
+            <script>
+                const cartItems = [
+                    {prodId : 1, prodName : 'Mobile', prodPrice : 15000},
+                    {prodId : 2, prodName : 'Laptop', prodPrice : 20000},
+                    {prodId : 3, prodName : 'Tv', prodPrice : 18000},
+                    {prodId : 4, prodName : 'Headphone', prodPrice : 5000}
+                ];
+
+                const checkPrice = cartItems.every((item) => {
+                    return item.prodPrice < 25000;
+                });
+
+                
+                console.log(checkPrice);
+
+            </script>
+
+            O/p:
+                true
+
+
+        Example 3:  // Check If Arr Containns Any Even Num Or Not
+            <script>
+                let arr = [2, 5, 9, 7, 4, 22, 3];
+
+                const checkEven = arr.every((ele) => {
+                    return ele % 2 === 0;
+                });
+
+                console.log(checkEven);
+            </script>
+
+            O/p:
+                false
+
+</body>
+</html>

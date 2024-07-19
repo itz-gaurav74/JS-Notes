@@ -141,6 +141,53 @@
          <!-- For More Detailed In Sorting Steps See - SortExplain.md File -->
         
 
+    ## Real-World Example:
+         - We See In Most Of The Websites Price List -> LowToHigh & HighToLow
+
+         Example:
+            <script>
+                const products =[
+                    {prodId : 1, prodName : 'Mobile', prodPrice : 15000},
+                    {prodId : 2, prodName : 'Laptop', prodPrice : 20000},
+                    {prodId : 3, prodName : 'Tv', prodPrice : 18000},
+                    {prodId : 4, prodName : 'Headphone', prodPrice : 5000}
+                ];
+
+                // Price LowToHigh --
+                products.sort((a, b) => {
+                    return a.prodPrice - b.prodPrice;
+                });
+
+                console.log(products);
+
+                // Price HighToLow --
+                // products.sort((a, b) => {
+                //     return b.prodPrice - a.prodPrice;
+                // });
+
+                // console.log(products);
+
+                
+
+            </script>
+
+            O/p:
+                
+                    // Price LowToHigh
+                (4) [{…}, {…}, {…}, {…}]
+                    0: {prodId: 4, prodName: 'Headphone', prodPrice: 5000}
+                    1: {prodId: 1, prodName: 'Mobile', prodPrice: 15000}
+                    2: {prodId: 3, prodName: 'Tv',  prodPrice: 18000}
+                    3: {prodId: 2, prodName: 'Laptop',  prodPrice: 20000}
+
+                <!-- 
+                    //  Price HighToLow
+                (4) [{…}, {…}, {…}, {…}]
+                    0: {prodId: 2, prodName: 'Laptop', prodPrice: 20000}
+                    1: {prodId: 3, prodName: 'Tv', prodPrice: 18000}
+                    2: {prodId: 1, prodName: 'Mobile', prodPrice: 15000}
+                    3: {prodId: 4, prodName: 'Headphone', prodPrice: 5000} -->
+                    
 
             
 

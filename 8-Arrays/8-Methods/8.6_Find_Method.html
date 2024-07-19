@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find method In Array</title>
+</head>
+<body>
+    # Find Method:
+        - It Reurns The Value Of First Array Element That Satisfies The Provided Test Function.
+        - It Return Undefined If None Of The Elements Satisfied The Function.
+
+
+        Example:
+            <script>
+                let nums = [1, 3, 4, 2, 5];
+
+                // Function To Check Even Num
+                let isEven = (ele) => {
+                    return ele % 2 == 0;
+                }
+
+                // Get The First Even Num
+                let firstEvenNum = nums.find(isEven);
+                console.log(firstEvenNum);
+            </script>
+
+            O/p:
+                4
+
+        Example 2:
+            <script>
+                const products =[
+                    {prodId : 1, prodName : 'Mobile', prodPrice : 15000},
+                    {prodId : 2, prodName : 'Laptop', prodPrice : 20000},
+                    {prodId : 3, prodName : 'Tv', prodPrice : 18000},
+                    {prodId : 4, prodName : 'Headphone', prodPrice : 5000},
+                ];
+
+                const prod3 = products.find((prod) => {
+                    return prod.prodId == 3;
+                });
+
+                console.log(prod3);
+            </script>
+
+            O/p:
+                {prodId: 3, prodName: 'Tv', prodPrice: 18000}
+
+
+</body>
+</html>

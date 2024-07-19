@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Method</title>
+</head>
+<body>
+    # Some Method:
+        - It Tests Whether Any Of The Array Elements Pass The Given Test Function.
+
+
+        Example:  // Checks Arr Contains Even Num Or Not
+            <script>
+                let nums = [1, 5, 9, 7, 4, 3];
+
+                const checkEven = nums.some((ele) => {
+                    return ele % 2 === 0;
+                });
+
+                console.log(checkEven);
+            </script>
+
+            O/p:
+                true
+
+        
+        Example 2:  // Check CartList Product Rate Is Contains Higher Then 25000
+            <script>
+                let cart = [
+                    {prodId : 1, prodName : 'Mobile', prodPrice : 15000},
+                    {prodId : 2, prodName : 'Laptop', prodPrice : 20000},
+                    {prodId : 3, prodName : 'Tv', prodPrice : 18000},
+                    {prodId : 4, prodName : 'Headphone', prodPrice : 5000}
+                ];
+
+                const check = cart.some((item) => {
+                    return item.prodPrice > 25000;
+                });
+
+                console.log(check);
+            </script>
+
+            O/p:
+                false
+
+
+        <!-- Notes: 
+            The some() method does not:
+                change the original array.
+                execute callback for array elements without values. -->
+</body>
+</html>
