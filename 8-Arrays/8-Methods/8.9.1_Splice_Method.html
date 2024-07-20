@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice Method</title>
+</head>
+<body>
+    # Splice Method:
+        - It Modifies An Array (Adds, Removes Or Replaces Elements).
+        - It Change The Original Array.
+
+        Syntax:
+            arr.splice(start, delete, insert);
+
+
+        Example:  // Remove The Ele In Index 4
+            <script>
+                let nums = [1, 4, 3, 2, 5, 7, 8];
+
+                nums.splice(4, 1);
+                console.log(nums);
+            </script>
+
+            O/p:
+                (6) [1, 4, 3, 2, 7, 8]
+
+        Example 2:  // Insert An Ele 5 At The Index Of 4
+            <script>
+                let numbers = [1, 2, 3, 4, 6, 7, 8];
+
+                numbers.splice(4, 0, 5);
+                console.log(numbers);
+            </script>
+
+            O/p:
+                (8) [1, 2, 3, 4, 5, 6, 7, 8]
+            
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterables In Array & Objects</title>
+</head>
+<body>
+    # Iterables:
+        - Iterables Means We Use For-Of Loop To Iterate.
+        - Iterables Are Any String & Array.
+
+        Example:  // Iterate Over String
+            <script>
+                let str = 'Done';
+
+                for (const char of str) {
+                    console.log(char);
+                }
+            </script>
+
+            O/p:
+                D
+                o
+                n
+                e
+
+        Example 2:  // Iterate Over Array
+            <script>
+                let arr = ['Item1', 'Item2', 'Item3', 'Item4'];
+
+                for (const item of arr) {
+                    console.log(item);
+                }
+            </script>
+
+            O/p:
+                Item1
+                Item2
+                Item3
+                Item4
+
+        
+        Example 3:  // Using Object Throw An Error
+            <!-- <script>
+                let obj = {name : 'Dev', age : 22};
+
+                for (const data of obj) {
+                    console.log(data);
+                }
+            </script> -->
+
+            O/p:
+                <!-- Uncaught TypeError: obj is not iterable -->
+
+    
+    # Array Like Objects:
+        - Means Who Has Length Property & We Have Access It Using Index. Eg, String
+
+        Example:
+            <script>
+                let data = 'Hello';
+
+                console.log(data.length);
+                console.log(data[1]);
+            </script>
+
+            O/p:
+                5
+                e
+</body>
+</html>
