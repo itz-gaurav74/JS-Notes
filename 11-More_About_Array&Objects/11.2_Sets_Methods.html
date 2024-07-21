@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Methods</title>
+</head>
+<body>
+    # Sets Methods:
+        - How to Create a Set:
+            - Passing an array to `new Set()`.
+             - Create an empty set and use `add()` to add values.
+
+
+
+        -  The new Set()  Method:
+            - Pass An Array To The `new Set()` Constructor.
+
+            Example:
+                <script>
+                    const fruits = new Set(['Apple', 'Banana', 'Cherry', 'Mango']);
+
+                    console.log(fruits);
+
+                    console.log(`----------`);
+                </script>
+
+                O/p:
+                    Set(4) {'Apple', 'Banana', 'Cherry', 'Mango'}
+
+
+        - The add() Method:
+
+            Example:
+                <script>
+                    // Creating A New Empty Set
+                    let newSet = new Set();
+
+                    // Add Ele To A Empty Set
+                    newSet.add('Java');
+                    newSet.add('JavaScript');
+                    console.log('Added New Ele To An Empty Set -', newSet);
+
+                    // We Can't Add Multiple Duplicate Elements
+                    newSet.add('Hello');
+                    newSet.add('Hello');  // Adding duplicate value, but it won't be added
+
+                    console.log("We Can't Add multiple Duplicate Ele", newSet);
+
+                    // We Can Add Multiply Similar/Duplicate Array By Using add();
+                    newSet.add(['Python', 'Django']);
+                    newSet.add(['Python', 'Django']);
+                    console.log('Added Duplicate Array Using Add(); -', newSet);
+
+                    // We Can't Add Already Created Array In Twice Or More
+                    let createArr = ['Item1', 'Item2', 'Item3', 'Item4'];
+
+                    newSet.add(createArr);
+                    newSet.add(createArr);
+
+                    console.log("We Can't Add Already Created Array In Set Using Add() -", newSet);
+
+                    console.log(`----------`);
+                </script>
+
+                O/p:
+                    Added New Ele To An Empty Set - Set(2) {'Java', 'JavaScript'}
+                    We Can't Add multiple Duplicate Ele Set(3) {'Java', 'JavaScript', 'Hello'}
+                    Added Duplicate Array Using Add(); - Set(4) {'Java', 'JavaScript', Array(2), Array(2)}
+                    We Can't Add Already Created Array In Set Using Add() - Set(5) {'Java', 'JavaScript', Array(2), Array(2), Array(4)}
+
+
+        -  Listing Set Elements:
+        
+            Example 2:  // Using For-Of Loop For Iterable
+                <script>
+                    let languages = new Set();
+        
+                    languages.add('JavaScript');
+                    languages.add('Java');
+                    languages.add('Python');
+                    languages.add('Django');
+                    languages.add('SpringBoot');
+        
+                    console.log('Added Languages -', languages);
+        
+                    for(const lang of languages){
+                        console.log(lang);
+                    }
+
+                    console.log(`----------`);
+                </script>
+        
+                O/p:
+                    Added Languages - Set(5) {'JavaScript', 'Java', 'Python', 'Django', 'SpringBoot'}
+                    JavaScript
+                    Java
+                    Python
+                    Django
+                    SpringBoot
+
+
+        - The has() Method:
+            - It Returns 'True' If A Specified Value Exists In Set.
+
+            Example 3:
+                <script>
+                    let projects = new Set();
+
+                    projects.add('Library Managment Sys');
+                    projects.add('Hotel Managment Sys');
+                    projects.add('College Data Managment Sys');
+
+                    console.log(projects);
+
+                    const checkContains = projects.has('College Data Managment Sys');
+
+                    console.log(checkContains);
+
+                    console.log(`----------`);
+                </script>
+
+                O/p:
+                    Set(3) {'Library Managment Sys', 'Hotel Managment Sys', 'College Data Managment Sys'}
+                    true
+
+
+        - The forEach() Method:
+            - It Invoke A Function For Each Set Ele.
+
+            Example 4:
+                <script>
+                    let letters = ['a', 'b', 'c', 'd'];
+
+                    letters.forEach((item) => {
+                        console.log(item);
+                    })
+                </script>
+
+                O/p:
+                    a
+                    b
+                    c
+                    d
+
+        
+
+</body>
+</html>
