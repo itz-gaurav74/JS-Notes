@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    # Maps:
+        1. Key-Value Pairs:
+            - A Map Holds Key-Value Pairs, Where The Key Can Be Any DataType.
+        2.  Original Insertion Order:
+            - This means the first key-value pair added to the Map will be stored first, the second added will be stored second, and so on. 
+        3. Key Data Types:
+            - Keys in a Map can be of any data type, such as numbers, strings, objects, or even other Maps.
+        4. Type Of Maps Are Objects:
+            <script>
+                const checkType = new Map();
+                console.log(typeof checkType);
+            </script>
+
+            O/p:
+                object
+
+    
+    # How to Create a Map:
+        - Passing an Array to `new Map()`.
+        - Create a Map and use `Map.set()`.
+
+
+        1. The new Map() Method:
+
+            Example:
+                <script>
+                    const fruits = new Map([
+                        ['Apple', 500],
+                        ['Banana', 300],
+                        ['Cherry', 200]
+                    ]);
+                    console.log(fruits);
+                </script>
+
+                O/p:
+                    Map(3) {'Apple' => 500, 'Banana' => 300, 'Cherry' => 200}
+
+            
+        2. The set() Method:
+            - We Can Add Elements To A Map With The `set()` Method.
+            - Also We Use `set()` Mathod To Chnage The Existing Map Values. 
+
+            Example:
+                <script>
+                    // Create a Map
+                    const fruitsStock = new Map();
+                    console.log('Fruits Stock : ',  fruitsStock);
+                    
+                    // Set Map Values
+                    fruitsStock.set('Apple', 500);
+                    fruitsStock.set('Banana', 300);
+                    fruitsStock.set('Cherry', 200);
+                    console.log('Fruits Stock Updated: ', fruitsStock);
+                    
+                    // Change Existing Values
+                    fruitsStock.set('Cherry', 400);
+                    console.log('Fruits Stock Modifyed: ', fruitsStock);
+                </script>
+
+                O/p:
+                    Fruits Stock :  Map(0) {size: 0}
+                    Fruits Stock Updated:  Map(3) {'Apple' => 500, 'Banana' => 300, 'Cherry' => 200}
+                    Fruits Stock Modifyed:  Map(3) {'Apple' => 500, 'Banana' => 300, 'Cherry' => 400}
+
+            
+        3. The get() Method:
+            - The `get()` Method Gets the Value Of A Key In A Map.
+
+            Example:
+                <script>
+                    const fruitsData = new Map([
+                        ['Apple', 500],
+                        ['Banana', 300],
+                        ['Cherry', 200]
+                    ]);
+
+                    console.log(fruitsData.get('Apple'));
+                </script>
+
+                O/p:
+                    500
+        
+</body>
+</html>

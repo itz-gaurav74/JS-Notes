@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    # As A Given Array  numbs = [1, 4, 2, 4, 5, 1, 1, 6], Log The Total Length Of Unique Values In Given Array ?
+    
+        <script>
+            let numbs = [1, 4, 2, 4, 5, 1, 1, 6];
+            const uniqueVals = new Set(numbs);
+            console.log('Numbers :', numbs);
+            console.log('Unique Values :', uniqueVals);
+
+            let length = 0;
+
+            for(const ele of uniqueVals){
+                length++
+            }
+            console.log(`Length Of Unique Values : ${length}`);
+        </script>
+
+        O/p:
+            Length Of Unique Values : 5  
+    
+</body>
+</html>

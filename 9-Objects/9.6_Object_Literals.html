@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+</head>
+<body>
+    # Object Literals:
+        - An Object Literal Is A Comma-Seperated List Of Name-Value Pairs Inside The Curly Braces.
+
+
+    # Object Literals Are Using The Following Syntax Rules:
+        - A Colon Seperated Property Name From Value.
+        - A Comma Seperates Each Name/Value Pair From The Next.
+        - There Should Be No Comma After The Last Name/Value Pair.
+
+
+    ## It Contsins `key` As Only `string` Or `symbol`:
+        key  --> string
+        key  --> symbol
+    
+    
+    Example:
+        <script>
+            let gretting = {
+                name : 'Harry Potter',
+                greet : (name, msg) => {
+                    console.log(`Hii ${name} ${msg}!`);
+                }
+            }
+
+            // Log Name
+            console.log(gretting.name);
+            // Call Greet Function
+            gretting.greet(gretting.name, 'Have A Nice Day');
+        </script>
+
+        O/p:
+            Harry Potter
+            Hii Harry Potter Have A Nice Day!
+
+
+
+
+
+</body>
+</html>
+
+<!-- For More About Visit Site -->
+<!-- https://betterprogramming.pub/object-literal-in-javascript-d3e0e7d58f3b -->
