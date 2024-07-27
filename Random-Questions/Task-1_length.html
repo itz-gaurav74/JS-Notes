@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks of length properties</title>
+</head>
+<body>
+  
+   
+    <pre>
+    1 What is the output of following code ?
+        
+        let arr = [4, 2, 3];
+        arr.length = 0;
+        console.log(arr.length);
+
+    --> For Output Check Console Window
+    </pre>
+    <script>
+        let arr = [4, 2, 3];
+        arr.length = 0;
+        console.log(arr.length);
+    </script>
+
+    <hr>
+
+    <pre>
+    2 What is the output of following code ?
+        
+        let arr2 = [4, 2, 3];
+        arr2.length = 1;
+        console.log(arr2.length);
+
+    --> For Output Check Console Window
+    </pre>
+    <script>
+        let arr2 = [4, 2, 3];
+        arr2.length = 1;
+        console.log(arr2.length);
+    </script>
+
+    <hr>
+
+    <pre>
+    3. What's the output of following code ?
+
+        let arr1 = [1, 2, 3, 4];
+        let arr2 = [5, 6, 7];
+        let arrTotal = [...arr1, ...arr2, 8, 9];
+
+        arrTotal.push(4);
+        arrTotal.pop();
+        arrTotal.pop();
+        
+        console.log(arrTotal.length);
+        
+    --> For Output Check Console Window
+    </pre>
+    <script>
+        let arr1 = [1, 2, 3, 4];
+        let arr2 = [5, 6, 7];
+
+        let arrTotal = [...arr1, ...arr2, 8, 9];
+
+        arrTotal.push(4);
+        arrTotal.pop();
+        arrTotal.pop();
+
+        console.log(arrTotal.length);
+    </script>
+
+
+</body>
+</html>

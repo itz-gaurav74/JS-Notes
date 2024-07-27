@@ -89,5 +89,29 @@
                 O/p:
                     500
         
+
+        Example:
+            <script>
+                const randomData = new  Map([
+                    ['Computer', 22],
+                    ['Laptop', 21],
+                    [255, 'Unknown Num '],
+                    [true, 'Boolean Accessed'],
+                    [[1, 2, 3], 'onetwothree']
+                ]);
+
+                // We Want To Log The All Keys
+                for(const key of randomData.keys()){
+                    console.log('Key is :', key, '& Type of key is :', typeof key);
+                    // console.log(key, typeof key);
+                }
+            </script>
+
+            O/p:
+                Key is : Computer & Type of key is : string
+                Key is : Laptop & Type of key is : string
+                Key is : 255 & Type of key is : number
+                Key is : true & Type of key is : boolean
+
 </body>
 </html>
