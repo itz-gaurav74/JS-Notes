@@ -3,5 +3,6 @@
     "editor.fontSize": 12,
     "terminal.integrated.fontSize": 10,
     "terminal.integrated.letterSpacing": 0,
-    "git.enabled": true
+    "git.enabled": false,
+    "git.allowForcePush": false
 }

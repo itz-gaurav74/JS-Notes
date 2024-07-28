@@ -21,10 +21,50 @@
                 length++
             }
             console.log(`Length Of Unique Values : ${length}`);
+
+            console.log(`----------`);
         </script>
 
         O/p:
             Length Of Unique Values : 5  
+
+
+    # As A Given Arr1 = [1, 2, 3, 4]   & Arr2 = [2, 5, 6, 1] Find The Duplicate Ele In Array & Unique Ele In Array ?
+    
+        <script>
+            let arr1 = [1, 2, 3, 4];
+            let arr2 = [2, 5, 6, 1];
+
+            // First combine both arrays
+            const combinedArr = [...arr1, ...arr2];
+            console.log('Combine Values :', combinedArr);
+
+            const emptyArr = new Set();
+
+            const duplicates = new Set();
+
+            // Iterating Over An Combined Array
+            for(const ele of combinedArr){
+                // console.log(ele)
+                if (emptyArr.has(ele)) {
+                    duplicates.add(ele);
+                } else {
+                    emptyArr.add(ele);
+                }
+            }
+
+            const duplicateVal = Array.from(duplicates);
+            const emptyArrVal = Array.from(emptyArr);
+
+            console.log('Duplicate Values :', duplicateVal);
+            console.log('Unique Values :',  emptyArrVal);
+        </script>
+
+        <!-- Check How Code Works In File - 11.1_Example.md -->
+        O/p:
+            Combine Values : (8) [1, 2, 3, 4, 2, 5, 6, 1]
+            Duplicate Values : (2) [2, 1]
+            Unique Values : (6) [1, 2, 3, 4, 5, 6]
     
 </body>
 </html>

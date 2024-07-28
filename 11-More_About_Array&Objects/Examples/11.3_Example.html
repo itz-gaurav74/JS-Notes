@@ -25,6 +25,8 @@
 
             console.log(`We access username : ${personData.userName}`);
             console.log(`We access rmn number : ${userExtraData.get(personData).rmn}`);
+
+            console.log(`----------`);
         </script>
 
         O/p:
@@ -79,25 +81,27 @@
             confidential.set( 'RMN person4', ExtraDataNum.get(accessForAll.person4).rmn);
             confidential.set( 'RMN person5', ExtraDataNum.get(accessForAll.person5).rmn);
             
-            console.log(confidential);
+            // console.log(confidential);
 
             function accessRole(role){
-            if (role == 'asm') {
-                console.log("Accessing all accessForAll and ExtraDataNum:");
-                console.log('Access Of All Users :', accessForAll);
-                console.log('Access Of Extra Data :', ExtraDataNum);
-            } else if(role == 'csm') {
-                console.log("Accessing all confidential data, including accessForAll and ExtraDataNum:");
-                console.log('Access Of All Users :', accessForAll);
-                console.log('Access Of Extra Data :', ExtraDataNum);
-                console.log('Access Of Confidential Data :', confidential);
-            }else if(role == 'cco'){
-                console.log("Accessing Only User Some Data:");
-                console.log('Access Of All Users :', accessForAll);
+                if (role == 'asm') {
+                    console.log("Accessing all accessForAll and ExtraDataNum:");
+                    console.log('Access Of All Users :', accessForAll);
+                    console.log('Access Of Extra Data :', ExtraDataNum);
+                } else if(role == 'csm') {
+                    console.log("Accessing all confidential data, including accessForAll and ExtraDataNum:");
+                    console.log('Access Of All Users :', accessForAll);
+                    console.log('Access Of Extra Data :', ExtraDataNum);
+                    console.log('Access Of Confidential Data :', confidential);
+                }else if(role == 'cco'){
+                    console.log("Accessing Only User's Some Data:");
+                    console.log('Access Of All Users :', accessForAll);
+                }else{
+                    console.log(`Pls Select A Correct Role!`)
+                }
             }
-        }
             
-            const role = prompt(`Enter The Role :`);
+            const role = prompt(`Enter The Role 'cco, asm, csm':`);
             accessRole(role);
 
 
