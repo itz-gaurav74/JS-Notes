@@ -39,6 +39,8 @@
                         ['Cherry', 200]
                     ]);
                     console.log(fruits);
+
+                    console.log(`----------`);
                 </script>
 
                 O/p:
@@ -64,6 +66,8 @@
                     // Change Existing Values
                     fruitsStock.set('Cherry', 400);
                     console.log('Fruits Stock Modifyed: ', fruitsStock);
+
+                    console.log(`----------`);
                 </script>
 
                 O/p:
@@ -84,6 +88,8 @@
                     ]);
 
                     console.log(fruitsData.get('Apple'));
+
+                    console.log(`----------`);
                 </script>
 
                 O/p:
@@ -97,7 +103,8 @@
                     ['Laptop', 21],
                     [255, 'Unknown Num '],
                     [true, 'Boolean Accessed'],
-                    [[1, 2, 3], 'onetwothree']
+                    [[1, 2, 3], 'onetwothree'],
+                    [{name : 'Dev', id : 22}, 'UserAccess']
                 ]);
 
                 // We Want To Log The All Keys
@@ -105,6 +112,8 @@
                     console.log('Key is :', key, '& Type of key is :', typeof key);
                     // console.log(key, typeof key);
                 }
+
+                console.log(`----------`);
             </script>
 
             O/p:
@@ -112,6 +121,30 @@
                 Key is : Laptop & Type of key is : string
                 Key is : 255 & Type of key is : number
                 Key is : true & Type of key is : boolean
+                Key is : (3) [1, 2, 3] & Type of key is : object
+                Key is : {name: 'Dev', id: 22} & Type of key is : object
 
+
+        Example: // Using Destructuring & For-Of Loop Get Key-Value Pair Data
+            <script>
+                const data = new Map([
+                    ['Computer', 22],
+                    ['Laptop', 21],
+                    [255, 'Unknown Num ']
+                ]);
+
+                // Destructure In Maps
+                for (const [key, val] of data) {
+                    // console.log(Array.isArray(key));  // true
+                    console.log(key, val);
+                }
+            </script>
+
+            O/p:
+                Computer 22
+                Laptop 21
+                255 'Unknown Num '
+
+        
 </body>
 </html>

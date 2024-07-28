@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Of Map</title>
+</head>
+<body>
+    # Use A Map In Real World Example:
+
+
+    Q. As Seen In Tata Play PRM portal Only CSM Can Get Access Of RMN Numbers Bt CCO Can't Have Any Number Access Of Customers So Create A CCO Access Data & ASM Access Data & Access Both Data Using Map. 
+
+        <script>
+            // Created A Simple Object 
+            const personData = {
+                userName : 'Dev',
+                userAdd : 'ABC',
+                userId : 21 
+            }
+
+            // Created A 
+            const userExtraData = new Map();
+            userExtraData.set(personData, {rmn : 1234567890, alternate : 12389734778, cli : 1244556677});
+
+            console.log(`We access username : ${personData.userName}`);
+            console.log(`We access rmn number : ${userExtraData.get(personData).rmn}`);
+        </script>
+
+        O/p:
+            We access username : Dev
+            We access rmn number : 1234567890
+
+        
+
+        <script>
+            const accessForAll = {
+                person1 : {
+                    activity : 1234,
+                    name : 'Harry',
+                    type : 'Installation'
+                },
+                person2 : {
+                    activity : 1244,
+                    name : 'Dev',
+                    type : 'Installation'
+                },
+                person3 : {
+                    activity : 1234,
+                    name : 'Gaurav',
+                    type : 'Installation'
+                },
+                person4 : {
+                    activity : 2234,
+                    name : 'Yash',
+                    type : 'Field Repair'
+                },
+                person5 : {
+                    activity : 1654,
+                    name : 'Harsh',
+                    type : 'Field repair'
+                }
+            }
+            // console.log(accessForAll);
+
+            const ExtraDataNum = new Map();
+            ExtraDataNum.set(accessForAll.person1, { rmn: 1212121212, 'alt no': 1212343434 });
+            ExtraDataNum.set(accessForAll.person2, { rmn: 1256121212, 'alt no': 1212343433 });
+            ExtraDataNum.set(accessForAll.person3, { rmn: 1234121212, 'alt no': 1212343422 });
+            ExtraDataNum.set(accessForAll.person4, { rmn: 1285121212, 'alt no': 1212343411 });
+            ExtraDataNum.set(accessForAll.person5, { rmn: 1276121212, 'alt no': 1212343444 });
+
+            // console.log(ExtraDataNum);
+            
+            const confidential = new Map();
+            confidential.set( 'RMN person1', ExtraDataNum.get(accessForAll.person1).rmn);
+            confidential.set( 'RMN person2', ExtraDataNum.get(accessForAll.person2).rmn);
+            confidential.set( 'RMN person3', ExtraDataNum.get(accessForAll.person3).rmn);
+            confidential.set( 'RMN person4', ExtraDataNum.get(accessForAll.person4).rmn);
+            confidential.set( 'RMN person5', ExtraDataNum.get(accessForAll.person5).rmn);
+            
+            console.log(confidential);
+
+            function accessRole(role){
+            if (role == 'asm') {
+                console.log("Accessing all accessForAll and ExtraDataNum:");
+                console.log('Access Of All Users :', accessForAll);
+                console.log('Access Of Extra Data :', ExtraDataNum);
+            } else if(role == 'csm') {
+                console.log("Accessing all confidential data, including accessForAll and ExtraDataNum:");
+                console.log('Access Of All Users :', accessForAll);
+                console.log('Access Of Extra Data :', ExtraDataNum);
+                console.log('Access Of Confidential Data :', confidential);
+            }else if(role == 'cco'){
+                console.log("Accessing Only User Some Data:");
+                console.log('Access Of All Users :', accessForAll);
+            }
+        }
+            
+            const role = prompt(`Enter The Role :`);
+            accessRole(role);
+
+
+        </script>
+</body>
+</html>
