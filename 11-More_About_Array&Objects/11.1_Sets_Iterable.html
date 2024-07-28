@@ -44,5 +44,47 @@
                 - We Can Get The Unique Values in The Set Using `.size` Property.
                  
 
+
+        1. Create a Set and add values ?
+            <script>
+                const fruits = new Set();
+
+                fruits.add('Apple');
+                fruits.add('Banana');
+                fruits.add('Cherry');
+                fruits.add('Strawberry');
+
+                console.log(fruits);  // Set(4) {'Apple', 'Banana', 'Cherry', 'Strawberry'}
+            </script>
+
+        2. Check for existence of a value ?
+            <script>
+                console.log(fruits.has('Strawberry'));  // true
+            </script>
+
+        3. Remove a value ?
+            <script>
+                fruits.delete('Apple');
+                console.log(fruits);  // Set(3) {'Banana', 'Cherry', 'Strawberry'}
+            </script>
+
+        4. Iterate over a Set ?
+            <script>
+                for(const fruit of fruits){
+                    console.log(fruit);
+                }
+                // Banana
+                // Cherry
+                // Strawberry
+            </script>
+
+        5. Convert a Set to an Array ?
+            <script>
+                const fruitsArr = Array.from(fruits);
+                console.log(fruitsArr);  // (3) ['Banana', 'Cherry', 'Strawberry']
+            </script>
+
+
+
 </body>
 </html>
