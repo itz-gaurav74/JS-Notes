@@ -8,6 +8,9 @@
 </head>
 <body>
     # Sets Methods:
+        - A `Set` is a collection of unique values. It does not allows duplicate entries.
+         
+
         - How to Create a Set:
             - Passing an array to `new Set()`.
              - Create an empty set and use `add()` to add values.
@@ -135,7 +138,9 @@
 
                     letters.forEach((item) => {
                         console.log(item);
-                    })
+                    });
+
+                    console.log(`----------`);
                 </script>
 
                 O/p:
@@ -144,6 +149,18 @@
                     c
                     d
 
+        - Set Size:
+            - Get The Number Of Ele In Set.
+                
+            Example 5:
+                <script>
+                    const numbers = new Set([1, 2, 3, 4, 5, 6]);
+
+                    console.log(numbers.size);
+                </script>
+
+                O/p:
+                    6
         
 
 </body>

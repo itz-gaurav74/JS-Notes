@@ -10,31 +10,9 @@
 
 
     Q. As Seen In Tata Play PRM portal Only CSM Can Get Access Of RMN Numbers Bt CCO Can't Have Any Number Access Of Customers So Create A CCO Access Data & ASM Access Data & Access Both Data Using Map. 
-
-        <script>
-            // Created A Simple Object 
-            const personData = {
-                userName : 'Dev',
-                userAdd : 'ABC',
-                userId : 21 
-            }
-
-            // Created A 
-            const userExtraData = new Map();
-            userExtraData.set(personData, {rmn : 1234567890, alternate : 12389734778, cli : 1244556677});
-
-            console.log(`We access username : ${personData.userName}`);
-            console.log(`We access rmn number : ${userExtraData.get(personData).rmn}`);
-
-            console.log(`----------`);
-        </script>
-
-        O/p:
-            We access username : Dev
-            We access rmn number : 1234567890
-
-        
-
+    
+    -->
+    
         <script>
             const accessForAll = {
                 person1 : {
@@ -103,8 +81,35 @@
             
             const role = prompt(`Enter The Role 'cco, asm, csm':`);
             accessRole(role);
-
-
         </script>
+
+
+
+
+    ==> // Testing Script Data
+        <!-- <script>
+            // Created A Simple Object 
+            const personData = {
+                userName : 'Dev',
+                userAdd : 'ABC',
+                userId : 21 
+            }
+
+            // Created A Map()
+            const userExtraData = new Map();
+            userExtraData.set(personData, {rmn : 1234567890, alternate : 12389734778, cli : 1244556677});
+
+            console.log(`We access username : ${personData.userName}`);
+            console.log(`We access rmn number : ${userExtraData.get(personData).rmn}`);
+
+            console.log(`----------`);
+        </script>
+
+        O/p:
+            We access username : Dev
+            We access rmn number : 1234567890 -->
+
+
+
 </body>
 </html>
