@@ -7,6 +7,43 @@
     <title>Tasks Of Map</title>
 </head>
 <body>
-    find the number that is repeated the maximum number of times in the array [3, 1, 5, 5, 7, 2, 7, 5, 9, 8].
+    <pre>
+        1. Find the number that is repeated the maximum number of times in the array [3, 1, 5, 5, 7, 2, 7, 5, 9, 8] ?
+
+    </pre>
+    <script>
+        let data = [3, 1, 5, 5, 7, 2, 7, 5, 9, 8];
+
+        let countMap = new Map();
+
+        
+        for (const num of data) {
+            if(countMap.has(num)){
+                countMap.set(num, countMap.get(num) + 1)
+            }else{
+                countMap.set(num, 1)
+            }
+        }
+
+        console.log(countMap)
+
+        let maxCount = 0;
+        let FreqNum = null
+
+        countMap.forEach((count, numData) => {
+            console.log(count, numData)
+            if (count > maxCount) {
+                maxCount = count
+                FreqNum = numData
+            }
+        })
+
+        console.log(FreqNum, maxCount)
+
+    </script>
+
+
+
+
 </body>
 </html>
