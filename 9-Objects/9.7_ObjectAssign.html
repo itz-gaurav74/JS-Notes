@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Using Object.Assign </title>
+</head>
+<body>
+    # Object.assign():
+        - The 'Object.assign()' method copies properties from one or more source objects to a target object.
+        - Also it is used to merge objects.
+
+
+        Syntax:
+
+            Object.assign(target, ...sources);
+
+
+            'target': The object to which properties will be copied.
+            '...sources': One or more source objects from which properties will be copied to the target.
+
+
+
+
+        Example:
+            <script>
+                const obj = {
+                    key1 : 'value1',
+                    key2 : 'value2',
+                    key3 : 'value3',
+                    key4 : 'value4',
+                }
+                const obj2 = {
+                    key5 : 'value5',
+                    key6 : 'value6',
+                    key7 : 'value7',
+                    key8 : 'value8',
+                }
+
+                // Combine all the properties of obj, obj2 into single object.
+                const mergedObj = Object.assign(obj, obj2);
+                console.log('Merged Object :', mergedObj);
+               
+            </script>
+
+            O/p:
+                Merged Object : {key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4', key5: 'value5', …}
+
+
+    # USE CASES:
+        1. Merging Objects:
+            -  Useful For Combining Multiple Objects Into one
+        2. Creating A New Object:
+            - Often Used to Create A New Object With Additional Properties Without Mutating/Changing A Original Object.
+        3. Default Values:
+            - Used To Set Default Values For Objects By Assigning A Default Object First.
+            
+            
+    # Notes
+        - If the sources contain properties that are non-enumerable or symbols, these will not be copied.
+        - Object.assign() does not handle deep cloning. For nested objects, a deeper copy would be required.
+
+        
+</body>
+</html>

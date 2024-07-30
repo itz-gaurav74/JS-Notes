@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Of Object.assign</title>
+</head>
+<body>
+    # Example 1: Javascript Object.assign() to Clone Objects ?
+
+        <script>
+            // create source object
+            const obj = {
+                name : "Harry",
+                age : 22
+            }
+
+            // create a target object
+            const newObj = {}
+
+            // copy enumerable properties of obj to newObj
+            // newObj is returned & stored in copy object
+            const copy = Object.assign(newObj, obj);
+            // Print the copy object
+            console.log(copy);
+            
+            // Print newObj
+            console.log(newObj);
+
+            console.log(`----------`);
+        </script>
+
+        O/p:
+            {name: 'Harry', age: 22}
+            {name: 'Harry', age: 22}
+
+
+        Explanation:
+            Here, We have used the `assign()` method to assign the content of `obj` to `newObj`.
+
+            Since, `assign()` modifies the target object & returns some object, Both `copy` & `newObj` are clones one another. As a result, we get identical outputs when we print them both. 
+
+
+    Example 2: assign() to Merge Objects
+        
+        <script>
+            // Source Objects
+            const o1 = {a: 1, b: 2, c: 3};
+            const o2 = { b: 12, c: 13 };
+            const o3 = { c: 23 };
+
+            // Merge o1, o2 & o3
+            // earlier source keys are overwritten by later sources
+
+            const o4 = Object.assign({}, o1, o2, o3);
+
+            console.log(o4);
+        </script>
+
+        O/p:
+            {a: 1, b: 12, c: 23}
+
+
+            <!-- Using the empty object {} as a target object ensures that the properties of the other objects are copied to a new object without modifying any of the source objects. -->
+        
+
+
+</body>
+</html>
