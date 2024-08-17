@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    # Optional Chaining:
+        - It Allows Us To Safely Access The Properties Or The Call Functions On Potentially Null Or Undefined Values Without Giving Any Runtime Errors.
+
+        Syntax:
+            obj?.prop
+            obj?.[expr]
+            arr?.[index]
+            func?.(args)
+
+        Example:
+            <script>
+                const data = {
+                    userName : 'Harry',
+                    userData : {uniqId : 21},
+                    userCard : {cardName : 'Gold'}
+                }
+
+                console.log(data?.userName);
+                console.log(data?.userData?.uniqId);
+                console.log(data?.userCard?.userCardName)
+                // console.log(data2.userExperiece)
+            </script>
+
+            O/p:
+                Harry
+                21
+                Undefined
+                <!-- Uncaught ReferenceError: data2 is not defined -->
+
+
+        Explanation:
+            - The Optional Chaining (?.).
+            - It Checks The data Is Exist Or Not If Exists Then Log The Value Otherwise Show Undefined.
+
+
+</body>
+</html>
