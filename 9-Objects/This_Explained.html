@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword Explained</title>
+</head>
+<body>
+    # Global Context:
+        - When Used In The Global Scope (Outside Of Any Function), `this` Refers To The Global Object.
+
+        1. In a browser, the global object is `window`.
+
+        <script>
+            console.log(this); // In the browser, this logs the `window` object
+        </script>
+
+    # Object Method:
+        - When `this` is used inside a method of an object, it refers to the object that owns that method.
+
+        <script>
+            const person = {
+                name : 'Dev',
+                greet : function() {
+                    console.log(`The user name is ${this.name}`);
+                }
+            }
+
+            person.greet();
+        </script>
+</body>
+</html>

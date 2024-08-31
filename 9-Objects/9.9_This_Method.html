@@ -22,17 +22,71 @@
             }
 
             obj.about();
+            console.log(`--------------`);
         </script>
 
         O/p:
             The Name Is Harry & Age Is 22
 
-        
     Example: 2
         <script>
-            const personDetail()  {
-                
+            function printableData(){
+                console.log(`User Name Is ${this.name} And User Age Is ${this.age}`)
             }
+
+            const user1 = {
+                name:'Gaurav',
+                age:22,
+                company:'TCS',
+                userInfo:printableData
+            }
+
+            const user2 = {
+                name:'Dev',
+                age:21,
+                company:undefined,
+                userInfo:printableData
+            }
+
+            const user3 = {
+                name:'Harry',
+                age:23,
+                company:'Private',
+                userInfo:printableData
+            } 
+
+            
+            user1.userInfo();
+            user2.userInfo();
+            user3.userInfo();
+            console.log(`--------------`);
+        </script>
+
+
+    Example: 3
+        <script>
+            function personData() {
+                console.log(`UserName : ${this.name} & User Company : ${this.company}`);
+            }
+
+            const user11 = {
+                name : 'Gurav',
+                age : 22,
+                working : personData
+            }
+
+            const userWorkingData = {
+                company : 'TCS',
+                experience : '4 Yrs',
+
+            }
+
+            const combineUser = {
+                ...user11,
+                ...userWorkingData
+            }
+            
+            combineUser.working();
         </script>
 
 </body>
