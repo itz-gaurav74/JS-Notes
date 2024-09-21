@@ -16,6 +16,10 @@
             console.log(this); // In the browser, this logs the `window` object
         </script>
 
+        O/p:
+            Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+
     # Object Method:
         - When `this` is used inside a method of an object, it refers to the object that owns that method.
 
@@ -29,5 +33,38 @@
 
             person.greet();
         </script>
+
+        O/p:
+            The user name is Dev
+
+
+    # How To Call `this` In A Function?
+        - this will now refer again to the general window object, and we'll get this in our console: [object Window].
+
+        <script>
+            function test() {
+                console.log('this in a function', this);
+            }
+
+            test();
+        </script>
+
+        O/p:
+            Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+
+    ## A Note About `STRICT MODE
+        
+        <script>
+            'use strict';    // Checking Strictly
+            function testing() {
+                console.log('testing this', this)
+            }
+
+            testing();
+        </script>
+
+        O/p:
+            testing this undefined
 </body>
 </html>

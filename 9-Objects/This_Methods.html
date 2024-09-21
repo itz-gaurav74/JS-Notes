@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Methods</title>
+</head>
+<body>
+    # This Methods:
+        1. Call
+        2. Apply
+        3. Bind
+
+        # How to Use the 'Call' Method:
+            - It Is Useful When You Want To Borrow Methods From One Object And Use Them In Context Of Another Object.
+
+            Ex:
+                <script>
+                    const person1 = {
+                        name : 'Dev',
+                        age : 22,
+                        sayName : function() {
+                            return this.name+ ' ' + this.age
+                        }
+                    }
+
+                    const person2 = {
+                        name : 'Harry',
+                        age : 24
+                    }
+
+                    console.log(person1.sayName.call(person2));
+                    console.log(person1.sayName.call());
+                </script>
+
+            O/p:
+                Harry 24
+                undefined
+
+            
+            Ex 2:
+                <script>
+                    const user1 = {
+                        name : 'Harry',
+                        age : 22
+                    }
+
+                    const user2 = {
+                        name : 'Dev',
+                        age : 24
+                    }
+
+                    function about(company, pkg) {
+                        console.log(`User Name Is ${this.name} And Age Is ${this.age}. The Pkg Of ${this.name} Is ${pkg} In ${company} Company`);
+                    }
+
+                    about.call(user2, 'TCS', '25LPA');
+                </script>
+
+            O/p:
+                User Name Is Dev And Age Is 24. The Pkg Of Dev Is 25LPA In TCS Company
+
+        # How to Use the 'Apply' Method:
+            - It Is Similar To 'call',  But Insted Of Passing Arguments Individually, You Pass Them As An Array.
+
+            Ex:
+                <script>
+                    const emp1 = {
+                        name : 'Dev',
+                        age : 24
+                    }
+
+                    const emp2 = {
+                        name : 'Harry',
+                        age : 22
+                    }
+
+                    function abt(empCode, empPkg) {
+                        console.log(`Hii ${this.name}, Your EmpCode ${empCode} And EmpPkg ${empPkg} Is Correct.`)
+                    }
+
+                    abt.apply(emp1, ['T246', '28LPA'])
+                </script>
+
+            O/p:
+                Hii Dev, Your EmpCode T246 And EmpPkg 28LPA Is Correct.
+
+            
+        # How to Use the 'Bind' Method:
+            - 
+
+</body>
+</html>
