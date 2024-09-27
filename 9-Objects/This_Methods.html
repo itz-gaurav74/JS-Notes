@@ -32,6 +32,8 @@
 
                     console.log(person1.sayName.call(person2));
                     console.log(person1.sayName.call());
+
+                    console.log(`----------`);
                 </script>
 
             O/p:
@@ -56,6 +58,8 @@
                     }
 
                     about.call(user2, 'TCS', '25LPA');
+
+                    console.log(`----------`);
                 </script>
 
             O/p:
@@ -77,10 +81,12 @@
                     }
 
                     function abt(empCode, empPkg) {
-                        console.log(`Hii ${this.name}, Your EmpCode ${empCode} And EmpPkg ${empPkg} Is Correct.`)
+                        console.log(`Hii ${this.name}, Your EmpCode ${empCode} And EmpPkg ${empPkg} Is Correct.`);
                     }
 
-                    abt.apply(emp1, ['T246', '28LPA'])
+                    abt.apply(emp1, ['T246', '28LPA']);
+
+                    console.log(`----------`);
                 </script>
 
             O/p:
@@ -88,7 +94,66 @@
 
             
         # How to Use the 'Bind' Method:
-            - 
+            - Bind Method Is A function That Creates A New Function With A Specified `this` Value And Optionally, A Set Of Arguments.
+            - It Allows You To Control The Context In Which A Function Is Called.
+            
+            Syntax:
+                
+                function.bind(thisArgs, arg1[, arg2[, ...]]);
+
+            Parameters:
+                1. thisArgs - The Value To Use As `this` When The New Function Is Called.
+
+
+            Example:
+                <script>
+                    const obj = {
+                        val : 42
+                    }
+
+                    function getVal() {
+                        return this.val
+                    }
+
+                    const boundGetVal = getVal.bind(obj);
+
+                    console.log(boundGetVal());
+
+                    console.log(`----------`);
+                </script>
+
+                O/p:
+                    42
+
+                
+            When to Use bind: 
+                - Event Listeners: Ensure that this inside a callback refers to the object you want.
+                - Function Currying: Create new functions with some arguments preset.
+
+
+            Example 2 :
+                <script>
+                    const ceo1 = {
+                        name : 'Harry',
+                        age : 22 
+                    }
+
+                    const ceo2 = {
+                        name : 'Dev',
+                        age : 24
+                    }
+
+                    function callName(pkg, yr){
+                        return `User Name Is ${this.name} And ${pkg} Pkg`
+                    }
+
+                    const ceoData = callName.bind(ceo1);
+
+                    console.log(ceoData('25LPA'));
+                </script>
+
+                O/p:
+                    User Name Is Harry And 25LPA Pkg
 
 </body>
 </html>
